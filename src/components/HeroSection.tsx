@@ -131,7 +131,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick, onQuot
                 <div
                   key={slide.id}
                   className={`hero-card-image ${index === currentSlideIndex ? 'active' : ''}`}
-                  style={{ backgroundImage: `url(${slide.image})` }}
+                  style={{
+                    backgroundImage: `url(${slide.image})`,
+                    backgroundPosition: slide.imagePosition || 'center'
+                  }}
                   aria-hidden={index !== currentSlideIndex}
                 />
               ))}

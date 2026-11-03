@@ -36,7 +36,8 @@ export const HERO_SLIDES: HeroSlide[] = [
     suffixText: ' Yojana.',
     highlightText: 'PM Surya Ghar Yojana.',
     description: 'Get up to ₹78,000 in direct government subsidy for residential rooftop solar with complete approval assistance.',
-    image: '/assets/hero/pmsuryaghar-rooftop.jpg',
+    image: '/assets/hero/pm-modi-surya-ghar.jpg',
+    imagePosition: 'center top',
     primaryCtaText: 'Calculate Subsidy',
     secondaryCtaText: 'Check Eligibility'
   },

@@ -48,6 +48,7 @@ export interface HeroSlide {
   highlightText: string;
   description: string;
   image: string;
+  imagePosition?: string;
   primaryCtaText: string;
   secondaryCtaText: string;
 }
