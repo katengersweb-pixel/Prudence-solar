@@ -23,8 +23,8 @@ export const SuryaGharSection: React.FC<SuryaGharSectionProps> = ({ onEnquireCli
             <div className="surya-image-col">
               <div className="surya-image-wrapper">
                 <img
-                  src="/assets/hero/pmsuryaghar-rooftop.jpg"
-                  alt="PM Surya Ghar Rooftop Solar Setup on Modern Home"
+                  src="/assets/hero/pm-modi-surya-ghar.jpg"
+                  alt="Prime Minister Narendra Modi - PM Surya Ghar: Muft Bijli Yojana"
                   className="surya-image"
                   loading="lazy"
                   width="480"
