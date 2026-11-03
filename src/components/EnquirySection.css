@@ -124,16 +124,48 @@
 /* Form Card */
 .enquiry-form-card {
   background: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 24px;
   border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-md);
-  padding: 36px;
+  box-shadow: 0 10px 30px rgba(16, 43, 80, 0.08);
+  padding: 36px 32px;
+}
+
+/* Form Top Badge & Headline matching reference */
+.form-card-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.quick-quotation-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  background-color: #FFF7ED;
+  border: 1px solid #FFEDD5;
+  color: #D97706;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.form-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 .form-fields-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 18px 20px;
   margin-bottom: 24px;
 }
 
@@ -150,32 +182,51 @@
 .field-label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--navy);
+  color: #1E293B;
+  letter-spacing: 0.01em;
 }
 
 .required-star {
   color: #DC2626;
+  font-weight: 700;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1.5px solid var(--border-light);
-  font-size: 0.925rem;
-  color: var(--text-primary);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #E2E8F0;
+  font-size: 0.93rem;
+  color: #0F172A;
   background-color: #FFFFFF;
   transition: all var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #94A3B8;
+  font-weight: 400;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 42px;
+  cursor: pointer;
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--solar-yellow);
-  box-shadow: 0 0 0 3px rgba(247, 169, 0, 0.2);
+  border-color: #FFA726;
+  box-shadow: 0 0 0 3px rgba(255, 167, 38, 0.2);
 }
 
 .form-input.has-error, .form-select.has-error {
   border-color: #EF4444;
+  background-color: #FEF2F2;
 }
 
 .field-error {
@@ -186,13 +237,70 @@
 
 .form-textarea {
   resize: vertical;
+  min-height: 84px;
 }
 
-.form-submit-btn {
-  width: 100%;
-  padding: 15px 24px;
-  font-size: 1rem;
+/* Two Action Buttons Row */
+.form-buttons-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.btn-submit-inquiry {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FFA726 0%, #F59E0B 100%);
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 20px;
   border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.btn-submit-inquiry:hover:not(:disabled) {
+  background: linear-gradient(135deg, #FFB74D 0%, #E68A00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.45);
+}
+
+.btn-submit-inquiry:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btn-whatsapp-inquiry {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+  transition: all var(--transition-fast);
+}
+
+.btn-whatsapp-inquiry:hover {
+  background-color: #20BA56;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.38);
 }
 
 .form-privacy-note {
@@ -449,5 +557,23 @@
   }
   .form-fields-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .enquiry-form-card {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+  .form-card-title {
+    font-size: 1.35rem;
+  }
+  .form-buttons-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-submit-inquiry, .btn-whatsapp-inquiry {
+    width: 100%;
+    padding: 13px 18px;
   }
 }

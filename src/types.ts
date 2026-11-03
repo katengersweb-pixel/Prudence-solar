@@ -70,8 +70,12 @@ export interface EnquiryFormData {
   fullName: string;
   phone: string;
   email?: string;
-  solution: string;
-  city: string;
+  location: string;
+  propertyCategory?: string;
   monthlyBill?: string;
+  solarCapacity?: string;
+  rooftopType?: string;
   message?: string;
+  solution?: string;
+  city?: string;
 }
