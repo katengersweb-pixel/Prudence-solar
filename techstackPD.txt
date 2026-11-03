@@ -1,0 +1,331 @@
+
+## Technology Stack Document
+
+## 1. Purpose
+
+This document defines the technologies, frameworks, libraries, infrastructure, and development practices recommended for the Prudence Solar & Scientific Solutions website.
+
+The technology stack must support a professional, responsive user interface, an interactive solar calculator, product and customer galleries, customer enquiries, and future expansion.
+
+The implementation should prioritize maintainability, performance, security, accessibility, and ease of deployment.
+
+## 2. Technology Stack Overview
+
+| Layer | Technology | Purpose |
+|---|---|---|
+| AI-assisted development | Google Antigravity | Code generation, editing, debugging, and testing assistance |
+| Frontend framework | React | Component-based user interface |
+| Programming language | TypeScript | Type safety and maintainable code |
+| Build tool | Vite | Development server and production build |
+| Styling | Tailwind CSS and custom CSS | Responsive layouts and brand styling |
+| Icons | Lucide React | Consistent interface icons |
+| Carousel | Embla Carousel or a lightweight custom solution | Four-image hero slideshow |
+| Form management | React Hook Form | Form state and submission handling |
+| Validation | Zod | Input validation and data schemas |
+| Backend | Supabase Edge Functions or a secure server endpoint | Enquiry processing |
+| Database | Supabase PostgreSQL | Persistent enquiry storage, if required |
+| Hosting | Vercel | Website deployment and hosting |
+| Version control | Git and GitHub | Source-code management and change history |
+| Maps | Google Maps embed or link | Display the company location |
+
+The final dependencies must be selected based on the existing repository and compatibility. Avoid installing unnecessary libraries.
+
+## 3. Frontend Architecture
+
+### 3.1 React
+
+React will provide the component-based architecture for the website.
+
+Reusable components will include:
+- Header and navigation
+- Hero carousel
+- Trusted partner section
+- Company statistics
+- Product cards
+- PM Surya Ghar information section
+- Solar calculator
+- Customer gallery
+- Review cards
+- Enquiry form
+- Contact section and footer
+
+### 3.2 TypeScript
+
+TypeScript will be used to improve code reliability and maintainability.
+
+It should define types for:
+- Product information
+- Customer testimonials
+- Gallery images
+- Calculator inputs and outputs
+- Enquiry form data
+- Navigation items and reusable component properties
+
+### 3.3 Vite
+
+Vite will provide the development server, dependency integration, and optimized production builds.
+
+The website should support local development, build validation, and deployment through a compatible hosting platform.
+
+### 3.4 Styling
+
+Tailwind CSS will be used for responsive layouts, spacing, typography, and reusable styling patterns. Custom CSS may be used for specialized animations, the carousel, and brand-specific effects.
+
+The brand color tokens are:
+
+- Navy blue: #102B50
+- Green: #4D922D
+- Solar gold: #F7A900
+- White: #FFFFFF
+- Soft background: #F5F7FA
+
+These values are initial design tokens and may be adjusted to match the supplied official logo more precisely.
+
+## 4. Application Features and Technology Mapping
+
+### 4.1 Hero carousel
+
+**Technology:** React and Embla Carousel, or a lightweight custom implementation.
+
+Requirements:
+- Four distinct solar images.
+- Automatic rotation and manual navigation.
+- Responsive image sizing.
+- Accessible controls and reduced-motion support.
+- Optimized image loading.
+
+### 4.2 Product showcase
+
+**Technology:** React components and TypeScript data structures.
+
+The showcase will contain:
+1. Quality Solar Panels
+2. Solar Street Lights
+3. On-Grid Solar Systems
+4. Solar Motors
+5. Solar Water Heaters
+6. Solar Security Cameras
+
+Product information should be maintained separately from presentation components to simplify updates.
+
+### 4.3 Company statistics
+
+**Technology:** React and TypeScript.
+
+Display years of experience, projects completed, and customers served. Only client-approved statistics may be published.
+
+Optional count-up animations should run once when the section becomes visible.
+
+### 4.4 PM Surya Ghar section
+
+**Technology:** React and standard external links.
+
+The section will provide scheme information and a link to the official portal:
+
+https://pmsuryaghar.gov.in/
+
+No government API integration is required for the initial release. Scheme details must be verified before publication.
+
+### 4.5 Solar calculator
+
+**Technology:** TypeScript calculation functions and React state.
+
+The calculator should estimate:
+- Solar system capacity
+- Indicative installation cost
+- Potential electricity bill savings
+- Approximate payback period
+
+Requirements:
+- Validate all numeric inputs.
+- Document the formulas and assumptions.
+- Make generation and cost assumptions configurable.
+- Present results without a page reload.
+- Clearly communicate that results are estimates, not guaranteed savings or quotations.
+
+A backend is not necessary for a basic calculator. A backend may be introduced later if calculations require external data or saved customer estimates.
+
+### 4.6 Customer gallery
+
+**Technology:** React, optimized image assets, and an optional lightbox library.
+
+The gallery should use approved customer and installation photographs. Below-the-fold images should be lazy-loaded, and meaningful images should have descriptive alternative text.
+
+### 4.7 Customer reviews
+
+**Technology:** React and structured testimonial data.
+
+Reviews should use real, approved customer feedback. A database or content-management system is unnecessary for the initial release if reviews are updated manually.
+
+### 4.8 Enquiry form
+
+**Technology:** React Hook Form, Zod, and a secure submission endpoint.
+
+Recommended fields:
+- Full name
+- Phone number
+- Email address, optional unless required
+- City or location
+- Interested product or service
+- Optional electricity bill
+- Optional message
+
+Requirements:
+- Client-side and server-side validation.
+- Clear loading, success, and failure states.
+- Spam protection.
+- Secure transmission and storage.
+- Privacy notice.
+- No exposed credentials or API secrets in frontend code.
+
+The form must submit to a configured destination. A visual success message alone does not constitute a successful submission.
+
+## 5. Backend and Database
+
+### Recommended approach
+
+For the initial website, use a simple frontend-first architecture and introduce a backend only where required.
+
+**Supabase** is the recommended optional backend service.
+
+It can provide:
+- PostgreSQL database for enquiries.
+- Edge Functions for secure processing.
+- Row-level security policies.
+- Authentication if a future administration portal is required.
+
+### Suggested enquiry data model
+
+| Field | Type | Description |
+|---|---|---|
+| id | UUID | Unique enquiry identifier |
+| full_name | Text | Customer name |
+| phone | Text | Contact number |
+| email | Text, nullable | Customer email |
+| location | Text | Customer city or area |
+| solution | Text | Selected product or service |
+| monthly_bill | Numeric, nullable | Optional bill amount |
+| message | Text, nullable | Additional requirements |
+| created_at | Timestamp | Submission time |
+| status | Text | Enquiry tracking status |
+
+Access to customer information must be restricted. Public users must not be able to retrieve all submitted enquiries or modify records they do not own.
+
+## 6. Hosting and Deployment
+
+### Vercel
+
+Vercel is recommended for hosting the frontend.
+
+Deployment process:
+1. Maintain the project in a Git repository.
+2. Connect the repository to Vercel.
+3. Configure the build command and output directory.
+4. Set required environment variables through the hosting platform.
+5. Deploy to a preview environment.
+6. Test the production build.
+7. Connect the company's custom domain.
+8. Enable HTTPS and verify the deployed site.
+
+If Supabase or another backend is used, its configuration must be completed independently.
+
+## 7. Security Requirements
+
+- Use HTTPS in production.
+- Validate input on both the client and server.
+- Never expose service-role keys or private API credentials.
+- Apply rate limiting and spam protection to enquiry endpoints.
+- Restrict database access through appropriate policies.
+- Store only necessary customer information.
+- Provide a privacy notice and an appropriate data-retention process.
+- Avoid collecting sensitive payment or identity information.
+- Keep dependencies updated and address relevant security vulnerabilities.
+
+## 8. Performance Requirements
+
+- Optimize photographs and use WebP or AVIF when suitable.
+- Lazy-load non-critical images.
+- Prioritize the initial hero image.
+- Specify image dimensions to minimize layout shifts.
+- Minimize unnecessary JavaScript and dependencies.
+- Avoid excessive animations and large background videos.
+- Test production builds and investigate performance regressions.
+
+## 9. Accessibility and Responsive Design
+
+The website must:
+- Support desktop, tablet, and mobile screen sizes.
+- Use semantic HTML and a logical heading hierarchy.
+- Provide accessible form labels and error messages.
+- Support keyboard navigation.
+- Maintain adequate contrast.
+- Include alternative text for meaningful images.
+- Respect reduced-motion preferences.
+- Avoid horizontal overflow and clipped content.
+
+## 10. Testing Strategy
+
+Testing should cover:
+
+**Functional testing**
+- Carousel navigation and rotation.
+- Navigation links and calls to action.
+- Solar calculator calculations and invalid inputs.
+- Form validation and actual submission.
+- Phone, email, map, and external portal links.
+
+**Responsive testing**
+- Mobile, tablet, and desktop layouts.
+- Menu behavior.
+- Form usability.
+- Image scaling and text wrapping.
+
+**Security testing**
+- Input validation.
+- Access control for stored enquiries.
+- Protection of secrets.
+- Spam and repeated submission handling.
+
+**Production testing**
+- Successful production build.
+- No critical console errors.
+- No broken images or links.
+- Correct deployment configuration.
+- Verified contact information.
+
+## 11. Development Workflow
+
+
+1. Inspect the repository and existing dependencies.
+2. Establish or refine the design system.
+3. Build the header, hero, and primary homepage sections.
+4. Add the product showcase, gallery, reviews, and footer.
+5. Implement the solar calculator.
+6. Implement the enquiry form and configure its submission destination.
+7. Perform responsive, accessibility, and functional testing.
+8. Deploy and verify the production website.
+
+Existing working code should be preserved. Framework changes or dependency replacement should be avoided unless necessary.
+
+## 12. Scope and Future Expansion
+
+The initial release includes the corporate website, product showcase, carousel, company statistics, PM Surya Ghar information, solar calculator, customer gallery, testimonials, enquiry form, and contact details.
+
+Future enhancements may include:
+- An administrative dashboard for managing enquiries.
+- A content-management system.
+- CRM integration.
+- Email notifications for new enquiries.
+- Detailed product pages.
+- Analytics and conversion tracking.
+- Saved solar estimates and customer follow-up workflows.
+
+These enhancements are outside the initial scope unless separately approved.
+
+## 13. Final Recommendation
+
+The recommended stack is **React + TypeScript + Vite + Tailwind CSS**, with Lucide React for icons, React Hook Form and Zod for enquiry validation, and Vercel for hosting.
+
+Supabase should be introduced if persistent enquiry storage or secure backend processing is required.
+
+The architecture should remain lightweight, modular, responsive, and maintainable. Google Antigravity must inspect the current project before making structural changes, and every interactive feature must be tested before deployment.

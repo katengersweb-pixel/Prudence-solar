@@ -1,0 +1,187 @@
+.quote-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  background-color: rgba(10, 28, 52, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.quote-modal-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 580px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-light);
+}
+
+.quote-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.quote-modal-close:hover {
+  background: var(--navy);
+  color: #FFFFFF;
+}
+
+.quote-form-content {
+  padding: 36px 36px 32px;
+}
+
+.quote-form-header {
+  margin-bottom: 24px;
+}
+
+.quote-header-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.quote-header-sub {
+  font-size: 0.9rem;
+  color: var(--text-body);
+}
+
+.quote-error-banner {
+  background: #FEE2E2;
+  color: #B91C1C;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.quote-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.modal-label {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.modal-input, .modal-select {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-light);
+  font-size: 0.9rem;
+  background: #FFFFFF;
+}
+
+.modal-input:focus, .modal-select:focus {
+  outline: none;
+  border-color: var(--solar-yellow);
+  box-shadow: 0 0 0 3px rgba(247, 169, 0, 0.2);
+}
+
+.quote-submit-btn {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+}
+
+.quote-confidential-note {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+/* Success View */
+.quote-success-content {
+  padding: 48px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-success-icon {
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.quote-success-title {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.quote-success-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.quote-next-steps {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 0.825rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 9999px;
+}
+
+.quote-close-btn {
+  padding: 12px 36px;
+}
+
+@media (max-width: 600px) {
+  .quote-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .quote-form-content {
+    padding: 28px 20px 24px;
+  }
+}

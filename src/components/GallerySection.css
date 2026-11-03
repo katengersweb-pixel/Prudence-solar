@@ -1,0 +1,193 @@
+.gallery-section {
+  background-color: var(--bg-subtle);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.gallery-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.gallery-title-wrap {
+  max-width: 600px;
+}
+
+.gallery-main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.gallery-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-nav-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.gallery-nav-btn:hover:not(:disabled) {
+  background: var(--navy);
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.gallery-nav-btn.active-nav {
+  background: var(--navy);
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(16, 43, 80, 0.25);
+}
+
+/* Infinite Loop Marquee */
+.gallery-loop-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 0 24px;
+  mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
+}
+
+.gallery-loop-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  user-select: none;
+}
+
+.gallery-loop-group {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  animation: galleryLoopScroll 42s linear infinite;
+  will-change: transform;
+}
+
+.gallery-loop-track.reverse-direction .gallery-loop-group {
+  animation-name: galleryLoopScrollReverse;
+}
+
+/* Pause on hover, mobile touch, or when Lightbox is active */
+.gallery-loop-wrapper:hover .gallery-loop-group,
+.gallery-loop-wrapper.is-paused .gallery-loop-group,
+body:has(.lightbox-backdrop) .gallery-loop-group {
+  animation-play-state: paused;
+}
+
+/* Forward: stream content continuously in an endless seamless loop */
+@keyframes galleryLoopScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+/* Reverse: stream towards right */
+@keyframes galleryLoopScrollReverse {
+  0% {
+    transform: translateX(calc(-100% - 20px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Pure Image Cards - No Text */
+.gallery-image-card {
+  flex: 0 0 310px;
+  height: 230px;
+  scroll-snap-align: start;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  background-color: #E2E8F0;
+  box-shadow: 0 4px 16px rgba(16, 43, 80, 0.08);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.gallery-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(16, 43, 80, 0.16);
+  border-color: rgba(77, 146, 45, 0.4);
+}
+
+.gallery-image-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-image-card:hover .gallery-image-photo {
+  transform: scale(1.08);
+}
+
+.gallery-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 43, 80, 0.38);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-image-card:hover .gallery-image-overlay {
+  opacity: 1;
+}
+
+.gallery-view-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transform: scale(0.85);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-image-card:hover .gallery-view-icon {
+  transform: scale(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-main-title {
+    font-size: 1.85rem;
+  }
+
+  .gallery-image-card {
+    flex: 0 0 260px;
+    height: 195px;
+    border-radius: 14px;
+  }
+}

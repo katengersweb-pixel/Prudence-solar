@@ -1,0 +1,474 @@
+Product Requirements Document (PRD)
+1. Product overview
+Product name: Prudence Solar & Scientific Solutions Website
+
+Product type: Corporate website with interactive solar estimation and customer enquiry features.
+
+Primary objective: Develop a professional, modern, user-friendly website that communicates Prudence's solar energy solutions, establishes trust, educates potential customers, and generates enquiries for solar products and installations.
+
+The website should retain the company's established identity while improving the presentation, usability, and accessibility of its online presence.
+2. Business background
+Prudence Solar & Scientific Solutions offers solar-related products and solutions. Its existing website showcases the following product categories:
+- Quality solar panels
+- Solar street lights
+- On-grid solar systems
+- Solar motors
+- Solar water heaters
+- Solar security cameras
+The company emphasizes high-quality products, expert installation, reliable after-sales support, performance, and long-term savings.
+
+The new website should communicate these offerings clearly and guide visitors toward contacting the company or requesting a quotation.
+3. Goals and success criteria
+Goal	Success criteria
+Build brand trust	Official logo, consistent branding, genuine company information
+Present solar solutions	All six product categories are displayed correctly
+Generate leads	Enquiry form and prominent contact calls to action
+Educate customers	PM Surya Ghar information and solar calculator
+Showcase credibility	Verified company statistics, actual customer photos, genuine reviews
+Improve usability	Responsive design, clear navigation, working buttons
+Ensure reliability	Functional calculator, validated forms, tested links and interactions
+
+The main business outcome is to convert website visitors into qualified enquiries for Prudence's products and services.
+4. Target audience
+
+Residential customers
+
+Homeowners exploring rooftop solar installations, electricity bill savings, or government subsidy eligibility.
+
+
+
+Commercial and industrial customers
+
+Businesses looking for solar panels, on-grid systems, energy solutions, and installation services.
+
+
+
+Product buyers
+
+Customers looking for street lights, solar motors, water heaters, and solar-powered security cameras.
+
+
+
+The primary geographical market should be confirmed with the client before location-specific content or regional claims are added.
+5. Brand identity and design requirements
+The supplied logo is the official brand reference and must be preserved without redesigning it.
+Brand color palette
+
+Navy blue
+
+#102B50
+
+Primary text, headings, navigation and footer
+
+
+Green
+
+#4D922D
+
+Sustainability accents and solar highlights
+
+
+Solar gold
+
+#F7A900
+
+Buttons, highlights and interactive elements
+
+
+White
+
+#FFFFFF
+
+Main backgrounds and clean visual space
+
+
+
+Design principles
+- Professional corporate appearance rather than a generic AI-generated template.
+- Strong solar photography and authentic installation images.
+- Clean typography, generous spacing, and a clear visual hierarchy.
+- Subtle transitions and animations that do not interfere with usability.
+- Consistent buttons, cards, form fields, and section spacing.
+- Responsive design for desktop, tablets, and mobile phones.
+- Accessible text contrast, keyboard navigation, and visible focus states.
+6. Website architecture
+The website will primarily be a single-page homepage, with supporting pages or external links added where necessary.
+
+Suggested navigation:
+
+Home | Solar Solutions | PM Surya Ghar | Gallery | Reviews | Contact
+
+The header should contain the Prudence logo and a prominent Get a Quote button. On mobile, the navigation should collapse into a menu.
+7. Functional requirements by section
+7.1 Hero section — rotating solar images
+
+
+
+
+
+
+
+
+
+Purpose: Immediately communicate the company's solar expertise.
+
+Requirements:
+- Display four distinct, high-quality solar photographs in a rotating carousel.
+- Use smooth transitions and optional navigation dots or arrows.
+- Provide a compelling headline, short supporting text, and clear calls to action.
+- Include buttons such as Explore Solar Solutions and Get a Free Quote.
+- Keep the text readable against every slide.
+
+
+The carousel should rotate automatically at a comfortable interval, pause when appropriate, and allow manual navigation. The first slide should load quickly, and the carousel must work on mobile.
+
+Suggested headline:
+
+Power Your Future with Smarter Solar Solutions.
+
+Supporting text:
+
+Discover reliable solar products and solutions designed to help you make better use of clean energy.
+7.2 Trusted partner section
+Purpose: Establish credibility and explain why customers should consider Prudence.
+
+Requirements:
+- A section heading such as “Your Trusted Partner in Solar Energy.”
+- A short company introduction.
+- Emphasis on product quality, installation expertise, and after-sales support.
+- Supporting photographs of real installations or the company's work.
+- A clear CTA leading to the enquiry form.
+The copy should be based on the client's verified company information, not invented claims about certifications, awards, or partnerships.
+7.3 Company statistics
+Display three prominent statistics:
+—
+Years of experience
+
+
+—
+Projects completed
+
+
+—
+Customers served
+
+
+
+Data requirement: The client must provide the actual figures. Until then, show placeholders during development or omit the figures from production. Do not display invented statistics.
+
+Animations may count the numbers upward when the section becomes visible, provided the effect remains subtle and accessible.
+7.4 PM Surya Ghar portal section
+Purpose: Help residential customers understand and access the PM Surya Ghar: Muft Bijli Yojana scheme.
+
+Requirements:
+- A visually distinct section explaining the scheme.
+- A concise overview of rooftop solar and the scheme's purpose.
+- A clear button linking to the official portal: pmsuryaghar.gov.in.
+- A secondary CTA to enquire with Prudence about installation support.
+- A responsive layout with solar imagery.
+All subsidy amounts, eligibility requirements, and scheme details must be verified against current official information before publication.
+
+The website must not imply that Prudence is a government authority or guarantee that a customer will receive a subsidy.
+7.5 Solar calculator
+Purpose: Let customers explore approximate solar system requirements and financial benefits.
+
+This is one of the key interactive features of the website.
+
+Inputs
+- Average monthly electricity bill in ₹, or monthly electricity consumption in kWh.
+- Optional electricity tariff, if the calculator uses consumption.
+- Optional location for more accurate solar-generation estimates.
+Outputs
+- Estimated solar system capacity in kW.
+- Indicative installation cost.
+- Estimated monthly or annual electricity bill savings.
+- Approximate payback period.
+Calculation requirements
+1. Validate inputs and explain the assumptions used.
+2. Estimate system capacity using an editable, documented calculation method.
+3. Calculate approximate installation cost using configurable cost-per-kW assumptions.
+4. Estimate savings using configurable generation, tariff, and system-efficiency assumptions.
+5. Calculate payback only when the required cost and savings inputs are valid.
+6. Provide a disclaimer that actual results depend on roof conditions, shading, location, tariffs, equipment, installation costs, and applicable scheme eligibility.
+A basic consumption-based estimate can use:
+\[
+\text{Estimated capacity (kW)}
+=
+\frac{\text{Monthly consumption (kWh)}}
+{\text{Estimated monthly generation per kW}}
+\]
+
+The monthly generation factor must be configurable and appropriate for the selected location. If the calculator uses the electricity bill instead, it must clearly state the tariff assumptions used.
+
+The calculator should not promise guaranteed savings or subsidy amounts. Actual prices and calculation parameters must be confirmed with the company.
+
+User interaction: A Calculate My Solar Savings button updates the results without requiring a page reload. A Request a Quote button should take the customer to the enquiry form, with calculator results optionally carried into the enquiry.
+7.6 Customer photo gallery
+Purpose: Demonstrate real completed projects and help visitors visualize Prudence's work.
+
+Requirements:
+- Responsive image grid or gallery.
+- Actual customer photographs and installation images supplied or approved by the company.
+- Optional captions describing the installation or project.
+- Click-to-expand image viewing, if appropriate.
+- Optimized images for performance.
+- Appropriate customer consent before publishing identifiable people or private property photographs.
+Do not substitute unrelated stock photographs and present them as actual Prudence customer installations.
+7.7 Customer reviews
+Purpose: Build confidence through customer experiences.
+
+Requirements:
+- Display customer review cards with a consistent layout.
+- Include customer name or approved display name, review text, and rating if available.
+- Use a responsive grid or horizontal carousel.
+- Use only genuine, approved testimonials.
+- Avoid invented ratings, names, and claims.
+If actual reviews are not yet available, the section should use clearly identified placeholders in development and remain unpublished or be omitted until genuine reviews are supplied.
+7.8 Enquiry form
+Purpose: Collect prospective customer enquiries.
+
+Required fields:
+Field	Requirement
+Full name	Required
+Phone number	Required
+Email address	Optional unless required by the business
+City or location	Required
+Interested solution	Required dropdown
+Monthly electricity bill	Optional
+Message	Optional
+
+The solution dropdown should include the six product categories and a general installation or consultation option, where applicable.
+
+Functional requirements
+- Client-side validation with clear error messages.
+- Phone number validation suitable for the intended market.
+- Loading, success, and error states.
+- Submission to an actual configured backend, CRM, or approved enquiry channel.
+- Spam protection and server-side validation where a backend is used.
+- Privacy notice explaining how enquiry details will be used.
+A successful message should appear only after the submission has actually succeeded. The form must not merely show a success message while discarding the data.
+
+During initial development, the form may run in test mode until the company provides the receiving email, backend, or other submission destination.
+7.9 Contact details and location
+Purpose: Make it easy for customers to reach Prudence.
+
+Requirements:
+- Company phone number or numbers.
+- Business email address.
+- Office address.
+- Embedded map or map link.
+- Working telephone links and email links.
+- Optional WhatsApp enquiry button, if the company approves it.
+- Footer navigation and the company tagline.
+The existing website screenshot shows these phone numbers:
+- +91 9515969797
+- +91 9390445571
+These should be confirmed with the client before production. The exact office address, email address, and map location still need to be supplied.
+8. Product showcase requirements
+The website must include the six product categories identified from the existing Prudence website.
+
+
+
+
+
+
+
+
+
+Quality Solar Panels
+
+Showcase solar panel products and their relevant specifications when provided by the company.
+
+
+
+
+
+
+
+
+
+
+
+Solar Street Lights
+
+Present lighting solutions, use cases, and available product variants.
+
+
+
+
+
+
+
+
+
+
+
+On-Grid Solar Systems
+
+Explain grid-connected rooftop systems and installation enquiry options.
+
+
+
+
+
+
+
+
+
+
+
+Solar Motors
+
+Showcase the available motor solutions and relevant applications.
+
+
+
+
+
+
+
+
+
+
+
+Solar Water Heaters
+
+Highlight product applications and available options.
+
+
+
+
+
+
+
+
+
+
+
+Solar Security Cameras
+
+Present available solar-powered surveillance solutions.
+
+
+
+Each product card should have a product image, name, concise description, and Enquire Now CTA. Where the client has not provided product specifications or pricing, the site must not invent them.
+9. Technical requirements
+The following is the recommended implementation direction for Antigravity. The actual stack should be confirmed after examining the existing project, if one exists.
+Area	Requirement
+Frontend	React with a suitable modern build setup, if compatible with the existing project
+Styling	Responsive CSS or an established styling solution
+Components	Reusable header, footer, cards, form fields, and buttons
+State	Manage carousel, calculator, and form states correctly
+Backend	Required for persistent enquiry submissions if no external form service is used
+Data	Configurable calculator assumptions and company content
+Images	Optimized, appropriately licensed or company-approved images
+Deployment	Production-ready build and configured hosting
+Security	Input validation, protected secrets, spam controls, and secure form handling
+
+Important: Antigravity should inspect the existing project before changing dependencies or replacing files. It must preserve working functionality and avoid unnecessary rewrites.
+10. Non-functional requirements
+Performance
+- Optimize image size and loading.
+- Avoid excessive animation libraries and unnecessary scripts.
+- Minimize layout shifts.
+- Keep the initial hero section responsive and fast to load.
+Accessibility
+- Use semantic HTML and logical heading order.
+- Provide alternative text for meaningful images.
+- Support keyboard navigation.
+- Maintain sufficient text contrast.
+- Respect reduced-motion preferences.
+Security and privacy
+- Validate all submitted form data on the server where applicable.
+- Never expose API keys or secrets in frontend code.
+- Collect only the personal information needed for enquiries.
+- Provide a clear privacy notice.
+- Use HTTPS in production.
+SEO
+- Add a descriptive page title and meta description.
+- Use meaningful headings and image alt text.
+- Include the company name and relevant solar services naturally.
+- Configure canonical URLs and sitemap when the domain is finalized.
+- Add structured business data only with verified company information.
+11. User journeys
+Journey A: Homeowner exploring rooftop solar
+Visits the homepage
+Reads about Prudence and PM Surya Ghar
+Uses the solar calculator
+Submits an enquiry for a quotation
+
+Journey B: Customer searching for a solar product
+Opens the product showcase
+Selects the relevant product
+Contacts Prudence through the enquiry form or phone
+
+12. Acceptance criteria
+The website is ready for client review when the following conditions are satisfied.
+Launch checklist
+0/16 checked
+
+
+
+Brand and layout
+[ ] Official logo is displayed correctly and consistently.
+[ ] Four-slide hero carousel works on desktop and mobile.
+[ ] Navigation links scroll or navigate to the correct destinations.
+[ ] All requested homepage sections are present.
+
+Content
+[ ] All six product categories are displayed.
+[ ] Company statistics use client-approved figures.
+[ ] Customer gallery and testimonials contain approved, genuine content.
+[ ] Contact details and PM Surya Ghar link are verified.
+
+Interactive features
+[ ] Solar calculator produces results from validated inputs.
+[ ] Enquiry form validates fields and submits to a configured destination.
+[ ] Buttons, phone links, email links, and map links work.
+[ ] Success and failure states are handled accurately.
+
+Quality
+[ ] Mobile, tablet, and desktop layouts are checked.
+[ ] No broken images, major layout defects, or console errors remain.
+[ ] Accessibility basics and image optimization are implemented.
+[ ] Production build and deployment configuration are tested.
+
+
+13. Development phases in Antigravity
+To avoid overwhelming Antigravity with all requirements at once, implementation should follow this sequence.
+1. Project inspection and setup: Inspect the repository, identify the framework, establish the design system, and confirm the responsive page structure.
+2. Homepage and branding: Implement the header, four-image hero carousel, trusted partner section, company statistics, and main navigation.
+3. Products and content sections: Add the six product categories, PM Surya Ghar section, customer gallery, reviews, and footer.
+4. Interactive features: Implement and test the solar calculator and enquiry form, including the necessary submission integration.
+5. Polish and validation: Improve animations, responsive behavior, accessibility, performance, SEO, and error handling.
+6. Client handover: Confirm real company information, test the production deployment, and document any remaining configuration requirements.
+Each phase should be tested before moving to the next. Antigravity should make targeted edits rather than replacing the entire project unnecessarily.
+14. Information still required from the client
+The website structure and initial implementation can proceed without all the details below, but the production version will need them.
+Use this checklist when collecting information from the company.
+[ ] Official company introduction and founding year
+[ ] Verified years of experience, projects completed, and customer count
+[ ] Office address and Google Maps location
+[ ] Confirmed phone numbers, business email, and WhatsApp preference
+[ ] Real installation photographs and customer gallery images
+[ ] Genuine customer reviews and approval to publish them
+[ ] Product specifications, pricing, and solar calculator assumptions
+[ ] Preferred enquiry destination, privacy policy, and any relevant company credentials
+
+15. Scope boundaries
+The first release includes the corporate homepage, product showcase, rotating hero images, company statistics, PM Surya Ghar information, solar calculator, customer gallery, reviews, enquiry form, and contact section.
+
+The following are not automatically included unless the client requests them:
+- E-commerce checkout and online payments.
+- Customer accounts or dashboards.
+- Inventory management.
+- Complex solar engineering simulations.
+- Government subsidy application processing.
+- A full content-management system.
+- Advanced analytics or CRM integration beyond the agreed enquiry workflow.
+This keeps the project focused on the client's requirements while leaving room for future expansion.
+
+Final product definition
+Prudence Solar & Scientific Solutions will have a responsive, professional corporate website that showcases its solar products, builds customer trust, helps visitors estimate potential solar benefits, and makes it easy to enquire about products and installation services.
+
+The logo, brand colors, existing product categories, and nine requested homepage sections form the foundation. The calculator and enquiry workflow provide the primary interactive functionality

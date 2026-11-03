@@ -1,0 +1,521 @@
+
+
+# 1. Design vision
+
+Create a clean, premium, trustworthy solar energy website that feels like an established scientific and renewable-energy company rather than a generic template.
+
+The design should balance three qualities:
+
+- Trust: clear company information, real project photographs, genuine reviews, and professional typography.
+- Energy: bright solar imagery, sunlight-inspired accents, and confident calls to action.
+- Scientific credibility: structured layouts, precise information, restrained visual effects, and transparent calculator estimates.
+
+The experience should feel welcoming to homeowners while remaining professional enough for commercial and industrial customers.
+
+# 2. Visual identity
+
+The supplied Prudence logo is the single source of truth for the brand. Do not redraw, recolor, distort, or replace it.
+
+[Imperial Sun Labs | Clean Energy Innovation & Research](https://images.openai.com/static-rsc-4/bVSpaWVWAgtQk2W8RGhcdLo7Z8kGMT3wE7ctMA8v7pjROYF6JGM-c8xSDhhP7Jkbeoh8qzIt2hxINJWnvYYjLb7vMHf0WCYFoSnGySVyWf_aZ2yEFeUUMSSfVOsoz5tibfpUEmXaDoPFzCsjMfkoGo3PhxUtVhpC3z8w6He9iTo?purpose=inline)
+
+Inspired by Science. Powered by Sun.
+
+Use the actual supplied logo asset in the website. The reference image above is illustrative, not a replacement for the original file.
+
+## 2.1 Color system
+
+Primary navy
+
+\#102B50
+
+Headings, navigation, footer, strong text
+
+Solar green
+
+\#4D922D
+
+Sustainability accents and selected icons
+
+Sunlight gold
+
+\#F7A900
+
+Primary CTA buttons and highlights
+
+Soft neutral
+
+\#F5F7FA
+
+Alternating sections and card backgrounds
+
+Additional colors:
+
+- White: `#FFFFFF`
+- Body text: `#465467`
+- Border: `#E2E8F0`
+- Error state: `#C62828`
+- Success state: `#2E7D32`
+
+Use gold sparingly so the main actions stand out. Green and navy should carry most of the brand identity.
+
+# 3. Typography
+
+Use a modern, readable sans-serif family such as Inter or Manrope.
+
+| Element         | Desktop guideline | Weight   |
+| --------------- | ----------------- | -------- |
+| Hero headline   | 48–60 px          | Bold     |
+| Section heading | 32–40 px          | Semibold |
+| Card heading    | 20–24 px          | Semibold |
+| Body text       | 16–18 px          | Regular  |
+| Supporting text | 14–15 px          | Regular  |
+| Button text     | 15–16 px          | Semibold |
+
+On mobile, reduce the hero headline to approximately 34–40 px and section headings to 26–30 px.
+
+Keep line lengths comfortable, use consistent spacing, and avoid excessive uppercase text.
+
+# 4. Page layout and composition
+
+- Maximum main content width: approximately 1200–1280 px.
+- Desktop side margins: fluid, with generous whitespace.
+- Standard section padding: 72–96 px vertically on desktop and 44–64 px on mobile.
+- Card corner radius: 12–18 px.
+- Use a consistent spacing scale based on multiples of 8 px.
+- Use subtle shadows only when they help establish depth.
+
+The page should alternate between white and soft-neutral sections. Avoid making every section a separate boxed card.
+
+# 5. Homepage design specifications
+
+## Section 1 — Header and hero carousel
+
+[Webdesign, Performance & Automatisierung | Paul Mill](https://images.openai.com/static-rsc-4/pecc_EpeGqfcRhIncsorCJwF3TWYKIryQjNeeJ7GeP-Wnz85Cj7A5O8ivHd10JX-5O8mLAwOPJKFvPl-SMINfWZQmeslyUWdObo3iTQw7RAcDgY0XQKcHFv-ZcMQYYBJUb6V0dy79-VK4LTlgedkrAN79eDUL6RmPScbmnC_lCI?purpose=inline)
+
+[paulmill.com](https://paulmill.com/?utm_source=chatgpt.com)
+
+### Header
+
+- White background with the original Prudence logo on the left.
+- Navigation links aligned to the right.
+- Gold Get a Quote button.
+- Optional phone contact in a compact header area.
+- Sticky header on scroll, with a subtle shadow.
+- Mobile hamburger menu with accessible open and close controls.
+
+Suggested navigation:
+
+`Home | Solar Solutions | PM Surya Ghar | Gallery | Reviews | Contact`
+
+### Hero
+
+Use a full-width photographic carousel with four distinct solar images:
+
+1. Residential rooftop solar panels.
+2. Commercial or industrial solar installation.
+3. Solar panels in a large solar farm.
+4. Solar installation in an Indian residential setting.
+
+Design each slide with:
+
+- Large headline and supporting text.
+- A darkened image overlay where necessary for readability.
+- Primary gold CTA: Get a Free Quote.
+- Secondary outlined CTA: Explore Solutions.
+- Small carousel indicators and manual navigation arrows.
+
+Motion: Crossfade or gentle horizontal transitions, around 5–6 seconds per slide. Pause automatic movement when the user prefers reduced motion.
+
+Avoid rapid transitions, exaggerated zooms, or multiple simultaneous animations.
+
+## Section 2 — Trusted partner
+
+[Solar Franchise Business Opportunity in India | M Fins Solar](https://images.openai.com/static-rsc-4/S8OPpm-Hk4FVvU1LLJHB97EA_-ZJnC14-bwtMIeDvVUZJ2kJVlkLp7e5XUCtNvrqpOG_Hi6FV_d7cay8jlBZ0T7A27dXjyQK3MtrZbfMC4cd-Mp6yAtX1pGIs12kcurajo216l7r88k_LdIsSPf0-ZLIUv7RPG5UZOMtnVrgxlI?purpose=inline)
+
+[mfinssolar.com](https://mfinssolar.com/solar-franchise-business-opportunity?utm_source=chatgpt.com)
+
+Use a two-column layout.
+
+- Left: heading, company introduction, three key value propositions.
+- Right: a large real installation photograph.
+
+Suggested heading: Your Trusted Partner in Solar Energy
+
+Supporting content should emphasize:
+
+- Quality solar products.
+- Expert installation.
+- Reliable after-sales support.
+
+Use small green icons and concise copy. Do not invent certifications or guarantees.
+
+## Section 3 — Company statistics
+
+## Our Impact in Numbers
+
+# —
+
+Years of experience
+
+# —
+
+Projects completed
+
+# —
+
+Customers served
+
+Illustrative layout only. Replace the dashes with client-approved statistics.
+
+Display three statistics in equal-width columns, with large navy numbers and compact labels. Optional count-up animation should run once when the section becomes visible.
+
+On mobile, stack the statistics into a two-column or single-column layout depending on available width.
+
+## Section 4 — PM Surya Ghar
+
+[Solar Panel Lagwane Mein Kitna kharch Aata Hai? How much cost to install solar panels in india 2026 Solar Panel लगवाने में कितना आता है खर्च? जमकर चलाएं एसी-कूलर, बिजली बिल की टेंशन होगी खत्म | Times Now Navbharat](https://images.openai.com/static-rsc-4/5HcQYZULuAxgYsnAIkeORCy21Vgsr1Fa0SNgzlqCHP3rQbcVPDXZ14NN442_Jldp_rrNaEMOdxQRwiBe6F_mfgwz-T2sjENXjMNn4KSrpabFA6pNVcnMTj9rHcpS8_Dwk1cGkyq87f1vhT-_-JE49V8NRLtFpjQavvYqyGo_15E?purpose=inline)
+
+[timesnowhindi.com](https://www.timesnowhindi.com/tech-gadgets/how-much-cost-to-install-solar-panels-in-india-2026-solar-panel-lagwane-mein-kitna-kharch-aata-hai-article-154366958?utm_source=chatgpt.com)
+
+Design this section as a prominent but restrained feature panel.
+
+- Soft green or warm-neutral background.
+- Text on one side and residential solar photography on the other.
+- Heading: Explore Rooftop Solar with PM Surya Ghar.
+- Concise explanation of the scheme.
+- Primary button: Visit Official Portal.
+- Secondary button: Enquire About Installation.
+
+The primary button should link to the official government portal. Scheme information must be verified before publication.
+
+Do not use government emblems or visual styling that could imply Prudence is a government agency.
+
+## Section 5 — Solar calculator
+
+## Estimate Your Solar Savings
+
+Illustrative component design. Live calculations should use validated assumptions and inputs.
+
+Monthly electricity bill (₹)
+
+Electricity tariff (₹ per kWh)
+
+Estimated monthly generation per kW (kWh)
+
+Indicative installation cost per kW (₹)
+
+Estimated system size
+
+# 3.1 kW
+
+Indicative system cost
+
+# ₹1,87,500
+
+Potential monthly savings
+
+## ₹2,550
+
+Simple payback estimate
+
+## 6.1 years
+
+Plan production calculator
+
+Illustrative calculation only, not an engineering quotation. The displayed assumptions are examples and must be calibrated and validated before launch.
+
+### Layout specification
+
+- Centered section heading and one-line description.
+- Calculator panel on a white card with a subtle border.
+- Input area on the left and results on the right on desktop.
+- Stacked input and result areas on mobile.
+- Green for savings figures, navy for capacity and cost.
+- Gold primary CTA: Request a Detailed Quote.
+
+The production calculator must use documented, validated calculations and configurable assumptions. The illustration above demonstrates the interface, not the final calculation model.
+
+## Section 6 — Customer gallery
+
+[D R Solar & Consultant - Neemuch | Premier Solar EPC Company](https://images.openai.com/static-rsc-4/3_OmKGnTDcY9W8HFgMaWMtd2WcUzgER3sYqQSDbdWAp84gOgIIi3nNMSwxJO_ge5_REsCY2l6H4LjM9w-ms5OwLHOrfJHiM9CFhmq1iP8VTYKnpgj4K6PthQgrg3DGkcv8E1qwuAp_bQdUiHVrIsZ4emdpL88bp0ebBBDY0ZY_k?purpose=inline)
+
+[Industrial Solar Energy Solutions | Segments](https://images.openai.com/static-rsc-4/Cst_nXVUSznD9Kqz9Dfb7C0M3Hrp5LdQD_33Wl5G_RV52zC4uoCsILDidI16xBGR_a_PzglKnum_Yvz1Z90ftgM_W-2hC0eUjhcHNSVhu9jE9bvX_7iEDLghh0M8GLxyEQIZYNB-mDsP0N7tKcY2_82V4hJp5R85fUd4OPjxt_o?purpose=inline)
+
+[APN Solar India | Authorized Solar EPC, PM Surya Ghar ₹78,000 Subsidy & Dealership Network](https://images.openai.com/static-rsc-4/X1NqTHdmZwRvpqwuhWnHLam8zD2Eypreo4vooowncpGgk34CtUj44ljmVWbHQMarodt55lxg5ZfQajjrJyahBYF7UYoq2BB_fSDJTfdBt2cEIHSE5gBnoY7jhzzQWMCjd-ekHWpS4ZF07TNYApTX1QHKeB8SPIG3klAfKerbNu8?purpose=inline)
+
+12
+
+### Design
+
+- Heading: Our Work, Their Confidence.
+- Three or four columns on desktop, two on tablet, one or two on mobile.
+- Consistent image ratios and spacing.
+- Light borders and modest corner rounding.
+- Optional image expansion in a lightbox.
+- Short captions for project type or location, if verified.
+
+Use actual client-provided installation photos in the final site. Stock images should never be represented as customer projects.
+
+## Section 7 — Customer reviews
+
+## What Our Customers Say
+
+Review-card layout reference — replace with approved real testimonials.
+
+Customer testimonial
+
+Approved customer feedback will appear here.
+
+Customer name
+
+Customer testimonial
+
+Approved customer feedback will appear here.
+
+Customer name
+
+Use a clean two- or three-column grid or a controlled carousel. Do not add fake five-star ratings, fabricated customer identities, or unverified claims.
+
+## Section 8 — Enquiry form
+
+## Let's Talk Solar
+
+Tell us what you need, and our team can follow up.
+
+Full name
+
+Phone number
+
+Interested solutionOn-Grid Solar Systems
+
+City / location
+
+Message (optional)
+
+Continue form implementation
+
+Design prototype only. The final form must submit to a configured, secure destination and display success only after confirmation.
+
+### Form visual treatment
+
+- White background with subtle border and shadow.
+- Two-column form on desktop where space allows.
+- Single-column form on mobile.
+- Clear labels above fields.
+- Visible validation and submission states.
+- Privacy notice immediately near the submit button.
+- Gold submit button with navy text.
+
+## Section 9 — Footer and contact
+
+## PRUDENCE
+
+Solar & Scientific Solutions
+
+Inspired by Science. Powered by Sun.
+
+Explore
+
+Home
+
+Solar Solutions
+
+PM Surya Ghar
+
+Gallery & Reviews
+
+Contact
+
+Phone
+
+Email
+
+Office location
+
+© Prudence Solar & Scientific Solutions. All rights reserved.
+
+The footer should use navy as its background, white headings, muted light text, green or gold hover accents, and a compact, organized layout.
+
+Add an embedded map or a clearly labeled map link only after the company provides its confirmed address.
+
+# 6. Component and interaction design
+
+Use reusable components instead of designing every section independently.
+
+| Component     | Behavior                                        |
+| ------------- | ----------------------------------------------- |
+| Header        | Sticky navigation; responsive mobile menu       |
+| Hero carousel | Four slides; autoplay and manual controls       |
+| CTA button    | Consistent hover, focus, and pressed states     |
+| Product card  | Image, title, description, enquiry action       |
+| Statistics    | Verified values; optional count-up animation    |
+| Calculator    | Input validation, recalculation, result display |
+| Gallery item  | Responsive image; optional lightbox             |
+| Review card   | Consistent testimonial layout                   |
+| Enquiry form  | Validation, loading, success and error states   |
+| Footer        | Working navigation and contact links            |
+
+### Interaction principles
+
+- Hover effects should be subtle and quick.
+- Buttons should have visible hover and keyboard focus states.
+- Avoid parallax, constant floating effects, or excessive scroll animations.
+- Respect reduced-motion settings.
+- Never make a decorative element appear to be an interactive control.
+- All actions must work with mouse, keyboard, and touch input.
+
+# 7. Responsive design
+
+[Solar Energy Landing Page Design by Helal Hossain on Dribbble](https://images.openai.com/static-rsc-4/eMRTbpaPkby6cqGKp8wL5iRkW8uzBprAQhhbt2AsfpWp3ozPqR84TT05UwoHdQ72IHpoKA3hCZq8vHxiRUHYATnEjbVO11rXaQIipUn3Nxc22Z8Ipywt3fbVg0oeVpHJJ2OciKpu8079I-p6MTv1BjQNUE_Hoxmx1AoCfgAivP8?purpose=inline)
+
+Desktop — 1024 px and above
+
+Full navigation, large photographic hero, two-column introduction, three-column statistics, spacious product cards, and side-by-side calculator layout.
+
+[Sunvolt: Responsive Agency Website Template by Ui Hive — Framer Marketplace](https://images.openai.com/static-rsc-4/qQZktSETv9Iuz1mRuSvvUubzTAU53-vxlhlw3dtNv6Nm_t0UaRdERKbqTv_i5vEakf6v0yK4yrxeyrtVowd5v40nl94eT8Rij792QaxvPB-c2XEBVg13mJxWtKDrjVni_yPEGDEKTe1_2eIn6jBhEQgX4MfgorHPBdtuTkeVN78?purpose=inline)
+
+Tablet — 768–1023 px
+
+Compact navigation, smaller headings, flexible two-column layouts, and reduced section spacing.
+
+[Solar Energy Website Design UIUX Design | Animation | Responsive by ilias miah ✪ Hire Now for Confidency on Dribbble](https://images.openai.com/static-rsc-4/LS_Ne51GSEzbHgKfjvEp02A5oW3OkOA12IOMfAxaIYgqWoK-_Hi4GmnahZG8YTC7rFiBxiLUBPZrzFqBT0LBjCZT63UfmGY5URgKb2Wckd_yai6MydoPFCZdaVpZi9HxJuKBa_MofPzDQLiHCTDv0gAmWJmeb3mX-gkNRndzj1c?purpose=inline)
+
+Mobile — below 768 px
+
+Collapsed menu, stacked content, touch-friendly buttons, single-column forms, optimized photography, and readable calculator results.
+
+Test the actual design at 320 px, 375 px, 768 px, 1024 px, and 1440 px widths. These are test targets, not rigid layout breakpoints.
+
+# 8. Image and asset guidelines
+
+Use the original logo asset supplied by the client and organize images in a predictable project directory, such as:
+
+```
+public/
+  assets/
+    logo/
+      prudence-logo.png
+    hero/
+      solar-residential.jpg
+      solar-commercial.jpg
+      solar-farm.jpg
+      solar-installation.jpg
+    products/
+      solar-panels.jpg
+      street-lights.jpg
+      on-grid-systems.jpg
+      solar-motors.jpg
+      water-heaters.jpg
+      security-cameras.jpg
+    gallery/
+```
+
+This is a suggested organization; Antigravity should adapt it to the existing project structure.
+
+Image requirements:
+
+- Use consistent cropping and aspect ratios.
+- Prefer WebP or AVIF when supported.
+- Lazy-load below-the-fold images.
+- Set image dimensions to minimize layout shifts.
+- Use `object-fit: cover` for photography and `contain` for the logo.
+- Preserve the logo's white background or transparency as provided; do not artificially remove or recolor it.
+
+# 9. Design quality checklist
+
+Design review
+
+0/12
+
+Brand colors match the supplied logo.
+
+Logo is preserved without distortion.
+
+Hero contains four relevant solar photographs.
+
+Navigation and CTAs have consistent styling.
+
+Sections have clear hierarchy and whitespace.
+
+Product cards use all six actual categories.
+
+Calculator layout is clear and usable.
+
+Gallery and review sections are visually consistent.
+
+Enquiry form has accessible labels and states.
+
+Footer contains verified contact information.
+
+Mobile layouts avoid overflow and clipped content.
+
+Animations are subtle and respect reduced motion.
+
+# 10. Master design prompt for Antigravity
+
+Once the project is ready, use this as the design foundation. It establishes the look and component rules without asking Antigravity to implement every feature in one oversized operation.
+
+# Prudence Solar & Scientific Solutions — Design Specification
+
+Design a premium, professional, responsive corporate website for Prudence Solar & Scientific Solutions.
+
+Brand tagline: “Inspired by Science. Powered by Sun.”
+
+## Brand rules
+
+- Use the original supplied Prudence logo without changing its shape, colors, proportions, or tagline.
+- Primary navy: #102B50.
+- Sustainability green: #4D922D.
+- Solar gold: #F7A900.
+- Main background: #FFFFFF.
+- Alternate background: #F5F7FA.
+- Use Inter or Manrope typography.
+- The overall design must feel trustworthy, modern, scientific, clean, and professionally art-directed, not like a generic AI-generated template.
+
+## Layout
+
+Create a well-spaced, responsive single-page corporate website with these sections in this order:
+
+1. Header and four-image solar hero carousel.
+2. Trusted partner introduction.
+3. Company statistics.
+4. PM Surya Ghar scheme section.
+5. Interactive solar calculator.
+6. Customer installation gallery.
+7. Customer reviews.
+8. Enquiry form.
+9. Contact information, location, and footer.
+
+Include all six company product categories: Quality Solar Panels, Solar Street Lights, On-Grid Solar Systems, Solar Motors, Solar Water Heaters, and Solar Security Cameras.
+
+## Visual direction
+
+Use high-quality solar photography, generous whitespace, clear typography, subtle shadows, 12–18 px card radii, restrained gold accents, and occasional green highlights. Avoid excessive gradients, glowing borders, oversized decorative shapes, excessive animations, and cluttered layouts.
+
+The hero must have four distinct images, readable text overlays, manual carousel controls, and prominent “Get a Free Quote” and “Explore Solutions” buttons.
+
+Use a two-column introduction section, a three-item statistics section, a dedicated scheme feature panel, a well-organized product showcase, a responsive photo gallery, clean testimonial cards, a professional enquiry form, and a navy footer.
+
+## Interaction and accessibility
+
+- Make navigation, CTA buttons, carousel controls, form inputs, phone links, and map links functional.
+- The solar calculator must use documented formulas and validated assumptions.
+- The enquiry form must connect to a real configured submission destination before being considered complete.
+- Use semantic HTML, accessible labels, visible keyboard focus, suitable contrast, and reduced-motion support.
+- Optimize images and ensure there is no horizontal overflow on mobile.
+
+## Content integrity
+
+- Use real company information and the supplied logo.
+- Do not invent statistics, certifications, prices, testimonials, or customer photographs.
+- Use clearly marked development placeholders wherever company information is missing.
+- Link PM Surya Ghar to the official government portal.
+- Clearly label solar estimates as indicative and subject to site assessment.
+
+## Implementation process
+
+First inspect the existing project, identify its framework and structure, and preserve working code. Then implement the shared design system and page layout. Do not rewrite the entire project or install unnecessary dependencies without a clear reason.
+
+Build in small stages and test each stage before proceeding. Finish with responsive checks, functional testing, accessibility review, and a production build.
+
+This design document is the visual companion to the PRD: the PRD defines what Prudence needs; the design document defines how the website should look and how its interface should behave.

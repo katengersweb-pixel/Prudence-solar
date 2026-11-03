@@ -1,0 +1,269 @@
+.floating-actions-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.call-btn {
+  background: var(--navy);
+}
+
+.call-btn.active {
+  background: var(--green);
+  transform: scale(1.08);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+}
+
+.floating-btn-tooltip {
+  position: absolute;
+  right: 60px;
+  background: rgba(16, 43, 80, 0.95);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: all var(--transition-fast);
+}
+
+.floating-btn:hover .floating-btn-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Call Options Popup Dialog */
+.call-options-popup {
+  position: absolute;
+  bottom: 125px;
+  right: 0;
+  width: 320px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 16px 40px rgba(16, 43, 80, 0.22);
+  padding: 18px;
+  z-index: 1600;
+  animation: popupFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.call-popup-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.call-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.call-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--navy-soft);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.call-popup-title {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.call-popup-company {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.call-popup-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.call-popup-close-btn:hover {
+  background: var(--bg-subtle);
+  color: var(--navy);
+}
+
+.call-numbers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.call-number-card {
+  background: var(--bg-subtle);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.call-number-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.call-number-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.call-number-value {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.call-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.call-dial-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--green);
+  color: #FFFFFF;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.call-dial-btn:hover {
+  background: #3d7924;
+  transform: translateY(-1px);
+}
+
+.call-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #FFFFFF;
+  color: var(--navy);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 5px 9px;
+  border-radius: 7px;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.call-copy-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.call-copy-btn .check-icon {
+  color: var(--green);
+}
+
+.call-popup-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.call-clock-icon {
+  color: var(--solar-yellow);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .floating-actions-container {
+    bottom: 18px;
+    right: 18px;
+  }
+  .floating-btn {
+    width: 46px;
+    height: 46px;
+  }
+  .call-options-popup {
+    width: 290px;
+    bottom: 115px;
+  }
+}
