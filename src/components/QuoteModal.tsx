@@ -43,7 +43,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim() || !city.trim()) {
       setError('Please fill in your name, phone number, and city.');
@@ -52,10 +52,30 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
     setError('');
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || '37fb1f4c-205b-4a4b-8d6b-4dfaf3255bdc';
+
+    const submissionData = new FormData();
+    submissionData.append('access_key', accessKey);
+    submissionData.append('subject', `☀️ New Solar Quote Request: ${fullName} (${city})`);
+    submissionData.append('from_name', 'Prudence Solar Website Modal');
+    submissionData.append('Full Name', fullName);
+    submissionData.append('Phone Number', phone);
+    submissionData.append('Interested Solution', solution);
+    submissionData.append('City / Location', city);
+    submissionData.append('Monthly Electricity Bill', monthlyBill || 'Not specified');
+
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: submissionData
+      });
+    } catch (err) {
+      console.warn('Quote modal dispatch error:', err);
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 900);
+    }
   };
 
   return (
@@ -70,8 +90,8 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
             <CheckCircle2 size={54} className="quote-success-icon" />
             <h3 className="quote-success-title">Quotation Request Received!</h3>
             <p className="quote-success-desc">
-              Thank you, <strong>{fullName}</strong>. Our senior solar technician is preparing
-              your customized quotation for <strong>{solution}</strong> and will reach out to you at{' '}
+              Thank you, <strong>{fullName}</strong>. Your customized quotation request for <strong>{solution}</strong> has been
+              sent directly to <strong>solar@prudencescientific.com</strong>. Our senior solar technician will reach out to you at{' '}
               <strong>{phone}</strong> today.
             </p>
             <div className="quote-next-steps">

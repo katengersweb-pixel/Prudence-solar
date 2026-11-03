@@ -76,35 +76,29 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({
 
     setIsSubmitting(true);
 
-    const payload = {
-      name: formData.fullName,
-      phone: formData.phone,
-      location: formData.location,
-      property_category: formData.propertyCategory || 'Individual Residential Villa',
-      monthly_power_bill: formData.monthlyBill || 'Not specified',
-      solar_capacity: formData.solarCapacity || 'Not specified',
-      rooftop_structure: formData.rooftopType || 'RCC Flat Concrete Terrace',
-      notes: formData.message || 'No additional notes',
-      recipient: 'solar@prudencescientific.com',
-      _subject: `☀️ New Solar Site Inspection: ${formData.fullName} (${formData.location})`
-    };
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || '37fb1f4c-205b-4a4b-8d6b-4dfaf3255bdc';
 
-    const web3Key = import.meta.env.VITE_WEB3FORMS_KEY;
+    const submissionData = new FormData();
+    submissionData.append('access_key', accessKey);
+    submissionData.append('subject', `☀️ New Site Inspection: ${formData.fullName} (${formData.location})`);
+    submissionData.append('from_name', 'Prudence Solar Website');
+    submissionData.append('Full Name', formData.fullName);
+    submissionData.append('Mobile Number', formData.phone);
+    submissionData.append('Location in Andhra Pradesh', formData.location);
+    submissionData.append('Property Category', formData.propertyCategory || 'Individual Residential Villa');
+    submissionData.append('Average Monthly Power Bill', formData.monthlyBill || 'Not specified');
+    submissionData.append('Estimated Solar Capacity', formData.solarCapacity || 'Not specified');
+    submissionData.append('Rooftop Structure Type', formData.rooftopType || 'RCC Flat Concrete Terrace');
+    submissionData.append('Specific Inquiries / Notes', formData.message || 'No additional notes');
 
     try {
-      if (web3Key) {
-        await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ access_key: web3Key, ...payload })
-        });
-      } else {
-        // Direct email dispatch to solar@prudencescientific.com via FormSubmit
-        await fetch('https://formsubmit.co/ajax/solar@prudencescientific.com', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload)
-        });
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: submissionData
+      });
+      const data = await response.json();
+      if (!data.success) {
+        console.warn('Web3Forms response:', data);
       }
     } catch (err) {
       console.warn('Form submission email dispatch error:', err);
