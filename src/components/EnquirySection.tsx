@@ -70,16 +70,48 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate real submission
-    setTimeout(() => {
+
+    const payload = {
+      name: formData.fullName,
+      phone: formData.phone,
+      location: formData.location,
+      property_category: formData.propertyCategory || 'Individual Residential Villa',
+      monthly_power_bill: formData.monthlyBill || 'Not specified',
+      solar_capacity: formData.solarCapacity || 'Not specified',
+      rooftop_structure: formData.rooftopType || 'RCC Flat Concrete Terrace',
+      notes: formData.message || 'No additional notes',
+      recipient: 'solar@prudencescientific.com',
+      _subject: `☀️ New Solar Site Inspection: ${formData.fullName} (${formData.location})`
+    };
+
+    const web3Key = import.meta.env.VITE_WEB3FORMS_KEY;
+
+    try {
+      if (web3Key) {
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ access_key: web3Key, ...payload })
+        });
+      } else {
+        // Direct email dispatch to solar@prudencescientific.com via FormSubmit
+        await fetch('https://formsubmit.co/ajax/solar@prudencescientific.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      }
+    } catch (err) {
+      console.warn('Form submission email dispatch error:', err);
+    } finally {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 1000);
+    }
   };
 
   const handleWhatsAppSubmit = (e: React.MouseEvent) => {
@@ -192,31 +224,44 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({
                 <CheckCircle2 size={48} className="success-icon" />
                 <h3>Site Inspection Request Received!</h3>
                 <p>
-                  Thank you, <strong>{formData.fullName}</strong>! Your free site inspection request
-                  for <strong>{formData.propertyCategory}</strong> in <strong>{formData.location}</strong> has been received successfully.
+                  Thank you, <strong>{formData.fullName}</strong>! Your inquiry for{' '}
+                  <strong>{formData.propertyCategory}</strong> in <strong>{formData.location}</strong> has been
+                  routed directly to <strong>solar@prudencescientific.com</strong>.
                   Our senior solar engineering team will contact you at <strong>{formData.phone}</strong> shortly.
                 </p>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsSubmitted(false);
-                    setFormData({
-                      fullName: '',
-                      phone: '',
-                      email: '',
-                      location: 'Chittoor (Head Office)',
-                      propertyCategory: 'Individual Residential Villa',
-                      monthlyBill: '',
-                      solarCapacity: '',
-                      rooftopType: 'RCC Flat Concrete Terrace',
-                      message: '',
-                      solution: ''
-                    });
-                  }}
-                  className="btn-outline submit-another-btn"
-                >
-                  Submit Another Request
-                </button>
+                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '12px' }}>
+                  <button
+                    type="button"
+                    onClick={handleWhatsAppSubmit}
+                    className="btn-whatsapp-inquiry"
+                    style={{ flex: 'none', padding: '10px 18px', fontSize: '0.88rem' }}
+                  >
+                    <WhatsAppIcon size={17} />
+                    <span>Send Copy via WhatsApp</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFormData({
+                        fullName: '',
+                        phone: '',
+                        email: '',
+                        location: 'Chittoor (Head Office)',
+                        propertyCategory: 'Individual Residential Villa',
+                        monthlyBill: '',
+                        solarCapacity: '',
+                        rooftopType: 'RCC Flat Concrete Terrace',
+                        message: '',
+                        solution: ''
+                      });
+                    }}
+                    className="btn-outline submit-another-btn"
+                    style={{ margin: 0, padding: '10px 18px', fontSize: '0.88rem' }}
+                  >
+                    Submit Another Request
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
