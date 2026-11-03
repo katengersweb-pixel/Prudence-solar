@@ -23,7 +23,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     suffixText: ' Performance.',
     highlightText: 'Rooftop Solar Performance.',
     description: 'Certified solar engineers deploying Tier-1 photovoltaic technology with optimal orientation for maximum energy yield.',
-    image: '/assets/hero/solar-installers.jpg',
+    image: '/assets/hero/solar-field-array.jpg',
     primaryCtaText: 'View Installations',
     secondaryCtaText: 'Book a Site Survey'
   },
