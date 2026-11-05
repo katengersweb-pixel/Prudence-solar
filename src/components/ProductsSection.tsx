@@ -299,6 +299,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onProductSelec
                     src={product.image}
                     alt={product.title}
                     className="product-img"
+                    style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
                     loading="lazy"
                     width="360"
                     height="220"

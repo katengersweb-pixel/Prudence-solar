@@ -141,6 +141,7 @@ export const PRODUCTS: ProductItem[] = [
     description: 'Smart and secure surveillance solutions powered by dedicated solar panel and battery, delivering non-stop 24/7 remote monitoring even during blackouts or in remote properties.',
     category: 'security',
     image: '/assets/products/security-camera.jpg',
+    imagePosition: 'center',
     badge: 'Continuous 4G Live',
     specs: ['Full HD Color Night Vision', 'Built-in 4G SIM / Wi-Fi Support', 'PIR Human Motion Detection', 'Solar Recharge Continuous']
   },

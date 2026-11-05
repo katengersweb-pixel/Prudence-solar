@@ -5,6 +5,7 @@ export interface ProductItem {
   description: string;
   category: 'residential' | 'commercial' | 'lighting' | 'agriculture' | 'security' | 'structures';
   image: string;
+  imagePosition?: string;
   badge?: string;
   specs: string[];
 }
