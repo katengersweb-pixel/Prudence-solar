@@ -251,7 +251,7 @@ export const OFFICES: OfficeLocation[] = [
     name: 'Andhra Pradesh',
     company: 'Prudence Industries Pvt. Limited',
     addressLines: [
-      'H.No: 2-42/2,',
+      'H.No: 2-14-2,',
       'Challa Subba Reddy,',
       'Audipudi, Karamchedu,',
       'Bapatla, Andhra Pradesh – 523170.',
