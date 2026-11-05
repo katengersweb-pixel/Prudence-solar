@@ -142,14 +142,14 @@
   will-change: transform;
 }
 
-/* Left to Right Infinite Animation (Requested default) */
-.team-loop-track.direction-left-to-right .team-loop-group {
-  animation: teamLoopScrollLeftToRight 40s linear infinite;
+/* Right to Left Infinite Animation (Default) */
+.team-loop-track.direction-right-to-left .team-loop-group {
+  animation: teamLoopScrollRightToLeft 36s linear infinite;
 }
 
-/* Right to Left Infinite Animation */
-.team-loop-track.direction-right-to-left .team-loop-group {
-  animation: teamLoopScrollRightToLeft 40s linear infinite;
+/* Left to Right Infinite Animation */
+.team-loop-track.direction-left-to-right .team-loop-group {
+  animation: teamLoopScrollLeftToRight 36s linear infinite;
 }
 
 /* Pause on hover, pause button, touch, or active modal */

@@ -23,7 +23,7 @@ interface TeamSectionProps {
 
 export const TeamSection: React.FC<TeamSectionProps> = ({ onConsultClick }) => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'leadership' | 'technical'>('all');
-  const [direction, setDirection] = useState<'left-to-right' | 'right-to-left'>('left-to-right');
+  const [direction, setDirection] = useState<'right-to-left' | 'left-to-right'>('right-to-left');
   const [isManualPaused, setIsManualPaused] = useState(false);
   const [isTouchPaused, setIsTouchPaused] = useState(false);
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
@@ -183,20 +183,20 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onConsultClick }) => {
           <div className="team-nav-controls">
             <button
               type="button"
-              onClick={() => setDirection('left-to-right')}
-              className={`team-nav-btn ${direction === 'left-to-right' ? 'active-nav' : ''}`}
-              aria-label="Loop moving left to right"
-              title="Loop moving left to right"
+              onClick={() => setDirection('right-to-left')}
+              className={`team-nav-btn ${direction === 'right-to-left' ? 'active-nav' : ''}`}
+              aria-label="Loop moving right to left"
+              title="Move right to left"
             >
               <ChevronLeft size={20} />
             </button>
 
             <button
               type="button"
-              onClick={() => setDirection('right-to-left')}
-              className={`team-nav-btn ${direction === 'right-to-left' ? 'active-nav' : ''}`}
-              aria-label="Loop moving right to left"
-              title="Loop moving right to left"
+              onClick={() => setDirection('left-to-right')}
+              className={`team-nav-btn ${direction === 'left-to-right' ? 'active-nav' : ''}`}
+              aria-label="Loop moving left to right"
+              title="Move left to right"
             >
               <ChevronRight size={20} />
             </button>
