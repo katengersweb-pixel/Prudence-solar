@@ -143,6 +143,36 @@ export const PRODUCTS: ProductItem[] = [
     image: '/assets/products/security-camera.jpg',
     badge: 'Continuous 4G Live',
     specs: ['Full HD Color Night Vision', 'Built-in 4G SIM / Wi-Fi Support', 'PIR Human Motion Detection', 'Solar Recharge Continuous']
+  },
+  {
+    id: 'solar-gi-structures',
+    title: 'Solar Module Structures (GI)',
+    subtitle: 'Pre-Galvanized Iron Rooftop Mounting',
+    description: 'High-strength Galvanized Iron (GI) module mounting structures engineered for flat and pitched roofs, offering high wind resistance and easy bolt-on installation.',
+    category: 'structures',
+    image: '/assets/products/solar-gi-structures.jpg',
+    badge: 'Corrosion Resistant',
+    specs: ['High Tensile GI Steel (80-120 GSM)', 'Up to 150 km/h Wind Speed Certified', 'Optimal 15° to 30° Tilt Angle', 'Rooftop & Ground Mount Compatible']
+  },
+  {
+    id: 'hot-dip-galvanized-structures',
+    title: 'Hot-Dip Galvanized Iron Solar Mounting Structures',
+    subtitle: 'Heavy-Duty 80-Micron Zinc Coated Steel',
+    description: 'Industrial-grade hot-dip galvanized mounting structures with 80+ micron zinc coating, built for superior 25+ year outdoor corrosion resistance in extreme weather environments.',
+    category: 'structures',
+    image: '/assets/products/hot-dip-galvanized-structures.jpg',
+    badge: '80μm Zinc Coated',
+    specs: ['IS 2062 Grade Steel Specification', '80+ Micron Hot-Dip Galvanization', '25+ Years Rust-Free Lifespan', 'Custom Elevated & Superstructure Designs']
+  },
+  {
+    id: 'mounting-frames-accessories',
+    title: 'Solar Panel Mounting Frames and Accessories',
+    subtitle: 'Hardware, Rails, Clamps & Fasteners',
+    description: 'Complete range of precision engineered solar mounting accessories including anodized aluminum rails, mid-clamps, end-clamps, L-feet brackets, and SS-304 fastener hardware.',
+    category: 'structures',
+    image: '/assets/products/mounting-frames-accessories.jpg',
+    badge: 'SS-304 Hardware',
+    specs: ['Anodized Extruded Aluminum Rails', 'Mid-Clamps & End-Clamps (30-40mm)', 'Stainless Steel SS-304 Fasteners', 'EPDM Rubber Gaskets & Cable Clips']
   }
 ];
 

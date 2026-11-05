@@ -3,7 +3,7 @@ export interface ProductItem {
   title: string;
   subtitle: string;
   description: string;
-  category: 'residential' | 'commercial' | 'lighting' | 'agriculture' | 'security';
+  category: 'residential' | 'commercial' | 'lighting' | 'agriculture' | 'security' | 'structures';
   image: string;
   badge?: string;
   specs: string[];

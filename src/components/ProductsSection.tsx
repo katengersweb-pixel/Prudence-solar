@@ -25,6 +25,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onProductSelec
     { id: 'all', label: 'All Solutions' },
     { id: 'residential', label: 'Residential' },
     { id: 'commercial', label: 'Commercial' },
+    { id: 'structures', label: 'Mounting Structures' },
     { id: 'lighting', label: 'Street Lighting' },
     { id: 'agriculture', label: 'Agriculture' },
     { id: 'security', label: 'Security' }
