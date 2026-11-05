@@ -121,6 +121,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </li>
 
             <li>
+              <a href="#team" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('team'); }}>
+                Team
+              </a>
+            </li>
+
+            <li>
               <a href="#reviews" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('reviews'); }}>
                 Reviews
               </a>
@@ -216,6 +222,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             <li>
               <a href="#gallery" onClick={(e) => { e.preventDefault(); scrollTo('gallery'); }}>
                 Installation Gallery
+              </a>
+            </li>
+            <li>
+              <a href="#team" onClick={(e) => { e.preventDefault(); scrollTo('team'); }}>
+                Leadership & Team
               </a>
             </li>
             <li>

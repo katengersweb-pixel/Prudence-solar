@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bgGradSS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="60%" stop-color="#3730A3" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+    <radialGradient id="auraSS" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#3730A3" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="circleGradSS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bgGradSS)" />
+  <circle cx="200" cy="120" r="130" fill="url(#auraSS)" />
+  <circle cx="200" cy="115" r="58" fill="url(#circleGradSS)" stroke="#A5B4FC" stroke-width="2.5" stroke-dasharray="4 4" />
+  <text x="200" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">SS</text>
+  <rect x="110" y="200" width="180" height="28" rx="14" fill="#1E1B4B" fill-opacity="0.6" stroke="#C7D2FE" stroke-width="1" />
+  <text x="200" y="219" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EEF2FF" text-anchor="middle" letter-spacing="0.5">MANAGING PARTNER</text>
+  <text x="200" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#C7D2FE" text-anchor="middle">Photo update coming soon</text>
+</svg>

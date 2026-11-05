@@ -7,6 +7,7 @@ import { SuryaGharSection } from './components/SuryaGharSection';
 import { CalculatorSection } from './components/CalculatorSection';
 import { ProductsSection } from './components/ProductsSection';
 import { GallerySection } from './components/GallerySection';
+import { TeamSection } from './components/TeamSection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { EnquirySection } from './components/EnquirySection';
 import { Footer } from './components/Footer';
@@ -14,7 +15,7 @@ import { LightboxModal } from './components/LightboxModal';
 import { QuoteModal } from './components/QuoteModal';
 import { FloatingActions } from './components/FloatingActions';
 import { Preloader } from './components/Preloader';
-import type { GalleryItem, ProductItem } from './types';
+import type { GalleryItem, ProductItem, TeamMember } from './types';
 import './App.css';
 
 export const App: React.FC = () => {
@@ -56,6 +57,17 @@ export const App: React.FC = () => {
   const handleEnquireSimilar = (item: GalleryItem) => {
     setPrefilledSolution(item.title);
     setPrefilledMessage(`I saw your completed installation project "${item.title}" in ${item.location} and would like a similar solar setup for my site.`);
+    const el = document.getElementById('enquiry-form');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleTeamConsult = (member: TeamMember) => {
+    setPrefilledSolution(`Consultation with ${member.name}`);
+    setPrefilledMessage(
+      `Hello Prudence Team, I would like to schedule a consultation with ${member.name} (${member.designation}, ${member.qualifications}) regarding my rooftop solar installation requirements.`
+    );
     const el = document.getElementById('enquiry-form');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -108,6 +120,9 @@ export const App: React.FC = () => {
 
         {/* 8. Customer Photo Gallery */}
         <GallerySection onImageClick={(item) => setSelectedGalleryItem(item)} />
+
+        {/* 8.5 Leadership & Technical Experts Team */}
+        <TeamSection onConsultClick={handleTeamConsult} />
 
         {/* 9. Reviews / Testimonials */}
         <ReviewsSection />

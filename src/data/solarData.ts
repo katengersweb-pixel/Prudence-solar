@@ -1,4 +1,4 @@
-import type { ProductItem, StatItem, GalleryItem, ReviewItem, HeroSlide, OfficeLocation, G2G3PackageTier } from '../types';
+import type { ProductItem, StatItem, GalleryItem, ReviewItem, HeroSlide, OfficeLocation, G2G3PackageTier, TeamMember } from '../types';
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
@@ -388,3 +388,109 @@ export function calculateG2G3Estimate(capacity: number, isCommercial: boolean = 
     isExactPackage: false
   };
 }
+
+/**
+ * Prudence Industries Leadership & Technical Installation Team
+ */
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: 'challa-rajasekharareddy',
+    name: 'Challa Rajasekharareddy',
+    qualifications: 'M.Sc., Ph.D.',
+    designation: 'Managing Partner and Director',
+    roleCategory: 'leadership',
+    roleCategoryLabel: 'Executive Leadership',
+    initials: 'CR',
+    avatarColor: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%)',
+    image: '/assets/team/challa-rajasekharareddy.svg',
+    shortBio:
+      'Spearheading strategic vision, research-driven solar engineering, and high-efficiency photovoltaic deployments across residential and commercial sectors.',
+    fullBio: [
+      'Dr. Challa Rajasekharareddy holds an M.Sc. and Ph.D. with deep academic and scientific foundations in advanced energy materials and technology. As Managing Partner and Director at Prudence Industries, he spearheads the company’s long-term strategic direction, scientific solar consultation, and technological innovations.',
+      'Under his leadership, Prudence Solar has successfully delivered over 325+ residential and commercial rooftop solar projects across Telangana and Andhra Pradesh, prioritizing Tier-1 photovoltaic standards, optimal azimuth angles, and maximum generation yield.',
+      'He actively champions the adoption of next-generation DCR N-Type TOPCon bifacial modules, custom-engineered elevated mounting structures, and robust DISCOM net-metering integration.'
+    ],
+    expertise: [
+      'Photovoltaic Research & Technology',
+      'Strategic Solar Governance',
+      'High-Yield Rooftop System Design',
+      'Commercial Solar Feasibility',
+      'Quality Assurance & Tier-1 Standards'
+    ]
+  },
+  {
+    id: 'saiempu-swapna',
+    name: 'Saiempu Swapna',
+    qualifications: 'MBA, LLB',
+    designation: 'Managing Partner and Director',
+    roleCategory: 'leadership',
+    roleCategoryLabel: 'Executive Leadership',
+    initials: 'SS',
+    avatarColor: 'linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%)',
+    image: '/assets/team/saiempu-swapna.svg',
+    shortBio:
+      'Guiding corporate governance, financial strategy, and end-to-end PM Surya Ghar government subsidy coordination for swift, hassle-free approvals.',
+    fullBio: [
+      'Saiempu Swapna brings a rare and powerful synthesis of business leadership and legal acumen, holding both an MBA in corporate management and an LLB in law. As Managing Partner and Director, she steers Prudence Industries’ operational excellence, regulatory compliance, and customer success.',
+      'She oversees the dedicated subsidy facilitation cell for the central PM Surya Ghar: Muft Bijli Yojana, ensuring every residential rooftop solar customer receives seamless portal registrations, timely DISCOM inspections, and direct CFA bank disbursements without procedural delays.',
+      'Her governance ensures strict ethical standards, transparent customer agreements, and strong partnerships with nationalized banking institutions for zero-hassle solar financing.'
+    ],
+    expertise: [
+      'Corporate & Financial Governance',
+      'DISCOM Regulatory Compliance',
+      'PM Surya Ghar Subsidy Management',
+      'Customer Relationship & Transparent Contracts',
+      'Solar Project Financing & Legal Oversight'
+    ]
+  },
+  {
+    id: 'satyanarayana',
+    name: 'Mr. Satyanarayana',
+    qualifications: 'M.Tech',
+    designation: 'Technical Expert – Installations',
+    roleCategory: 'technical',
+    roleCategoryLabel: 'Engineering & Installation Lead',
+    initials: 'SN',
+    avatarColor: 'linear-gradient(135deg, #064E3B 0%, #047857 100%)',
+    image: '/assets/team/satyanarayana.svg',
+    shortBio:
+      'Leading electrical engineering, high-voltage grid synchronization, and structural design validation for zero-loss rooftop performance.',
+    fullBio: [
+      'Holding an M.Tech in power engineering, Mr. Satyanarayana heads the technical design, electrical engineering, and grid synchronization team at Prudence Solar. He brings extensive hands-on experience in sizing string inverters, multi-MPPT optimization, and AC/DC distribution safety.',
+      'He conducts rigorous pre-installation site feasibility assessments, shadow-loss simulation modeling, and electrical safety audits to ensure full compliance with CEA (Central Electricity Authority) and state DISCOM standards.',
+      'His meticulous approach to chemical earthing, Class-II surge protection devices (SPDs), and dual-axis lightning arrestors guarantees lifetime durability for every installed system.'
+    ],
+    expertise: [
+      'Power Systems & Grid Synchronization',
+      'Inverter Sizing & MPPT Design',
+      'Shadow Analysis & Solar Simulation',
+      'Lightning & Surge Protection (SPD Class II)',
+      'Technical DISCOM Inspection Approvals'
+    ]
+  },
+  {
+    id: 'raju',
+    name: 'Mr. Raju',
+    qualifications: 'B.Tech',
+    designation: 'Expert – Installations',
+    roleCategory: 'technical',
+    roleCategoryLabel: 'Rooftop Fabrication & Execution Lead',
+    initials: 'RJ',
+    avatarColor: 'linear-gradient(135deg, #78350F 0%, #D97706 100%)',
+    image: '/assets/team/raju.svg',
+    shortBio:
+      'Directing on-site fabrication, heavy-duty elevated structure mounting, and precision module alignment for extreme weather resilience.',
+    fullBio: [
+      'Mr. Raju holds a B.Tech in engineering with specialized expertise in on-ground structural fabrication and mechanical assemblies. As Prudence Solar’s Expert in Installations, he leads the on-ground fabrication and installation crews across all residential and commercial sites.',
+      'Specializing in hot-dip galvanized iron (GI) structures and elevated rooftop mounts (G+1, G+2, G+3 buildings), Mr. Raju ensures structural integrity capable of withstanding wind loads exceeding 150 km/h without piercing terrace water-proofing.',
+      'From module clamping torque checks to weather-proof UV-resistant cabling, his rigorous on-site supervision guarantees rapid project turnaround and spotless execution.'
+    ],
+    expertise: [
+      'On-Site Installation Supervision',
+      'Hot-Dip Galvanized Structure Erection',
+      'Elevated Rooftop Mounting (G+2 / G+3)',
+      'Torque & UV-Resistant Cable Management',
+      'Field Safety & Rapid Commissioning'
+    ]
+  }
+];

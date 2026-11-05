@@ -89,3 +89,18 @@ export interface G2G3PackageTier {
   phase: string;
   notes?: string;
 }
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  qualifications: string;
+  designation: string;
+  roleCategory: 'leadership' | 'technical';
+  roleCategoryLabel: string;
+  shortBio: string;
+  fullBio: string[];
+  expertise: string[];
+  initials: string;
+  avatarColor: string;
+  image: string;
+}

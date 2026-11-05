@@ -73,6 +73,11 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team'); }}>
+                  Leadership & Team
+                </a>
+              </li>
+              <li>
                 <a href="#reviews" onClick={(e) => { e.preventDefault(); scrollToSection('reviews'); }}>
                   Customer Reviews
                 </a>

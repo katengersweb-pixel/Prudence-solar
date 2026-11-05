@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bgGradRJ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451A03" />
+      <stop offset="60%" stop-color="#9A3412" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <radialGradient id="auraRJ" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FB923C" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#9A3412" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="circleGradRJ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bgGradRJ)" />
+  <circle cx="200" cy="120" r="130" fill="url(#auraRJ)" />
+  <circle cx="200" cy="115" r="58" fill="url(#circleGradRJ)" stroke="#FDBA74" stroke-width="2.5" stroke-dasharray="4 4" />
+  <text x="200" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">RJ</text>
+  <rect x="100" y="200" width="200" height="28" rx="14" fill="#451A03" fill-opacity="0.6" stroke="#FED7AA" stroke-width="1" />
+  <text x="200" y="219" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFF7ED" text-anchor="middle" letter-spacing="0.5">EXPERT INSTALLATIONS</text>
+  <text x="200" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#FED7AA" text-anchor="middle">Photo update coming soon</text>
+</svg>
