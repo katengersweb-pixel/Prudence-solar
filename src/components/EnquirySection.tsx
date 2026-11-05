@@ -76,7 +76,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({
 
     setIsSubmitting(true);
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || '37fb1f4c-205b-4a4b-8d6b-4dfaf3255bdc';
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || 'ec7a7b44-4526-4093-89b9-52242092a9ad';
 
     const submissionData = new FormData();
     submissionData.append('access_key', accessKey);
