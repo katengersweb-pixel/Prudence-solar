@@ -251,17 +251,16 @@ export const OFFICES: OfficeLocation[] = [
     name: 'Andhra Pradesh',
     company: 'Prudence Industries Pvt. Limited',
     addressLines: [
-      'H.No: 2-14-2,',
-      'Challa Subba Reddy,',
-      'Audipudi, Karamchedu,',
-      'Bapatla, Andhra Pradesh – 523170.',
-      'C/o Challa Subba Reddy.'
+      'H.No: 2-14-2, Challa Subba Reddy House,',
+      'Audipudi Village, Karamchedu Mandal,',
+      'Near Chirala, Bapatla District,',
+      'Andhra Pradesh – 523170.'
     ],
     state: 'Andhra Pradesh',
     pin: '523170',
-    careOf: 'C/o Challa Subba Reddy.',
-    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Audipudi,+Karamchedu,+Bapatla,+Andhra+Pradesh+523170',
-    searchUrl: 'https://www.google.com/maps/search/?api=1&query=Audipudi,+Karamchedu,+Bapatla,+Andhra+Pradesh+523170'
+    careOf: 'Challa Subba Reddy House',
+    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Audipudi+Village,+Karamchedu+Mandal,+Near+Chirala,+Bapatla+District,+Andhra+Pradesh+523170',
+    searchUrl: 'https://www.google.com/maps/search/?api=1&query=Audipudi+Village,+Karamchedu+Mandal,+Near+Chirala,+Bapatla+District,+Andhra+Pradesh+523170'
   }
 ];
 

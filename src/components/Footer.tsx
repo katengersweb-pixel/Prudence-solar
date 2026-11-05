@@ -159,7 +159,7 @@ export const Footer: React.FC = () => {
                     <strong>Office 1:</strong> Shameerpet, Hyderabad, Telangana – 500078
                   </span>
                   <span className="footer-office-line">
-                    <strong>Office 2:</strong> Karamchedu, Bapatla, AP – 523170
+                    <strong>Office 2:</strong> Audipudi, Karamchedu, Near Chirala, Bapatla, AP – 523170
                   </span>
                 </div>
               </li>
