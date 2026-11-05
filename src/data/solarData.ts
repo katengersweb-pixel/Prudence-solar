@@ -59,27 +59,27 @@ export const HERO_SLIDES: HeroSlide[] = [
 export const COMPANY_STATS: StatItem[] = [
   {
     id: 'stat-experience',
-    value: 10,
+    value: 7,
     suffix: '+',
     label: 'Years of Experience',
     iconName: 'calendar',
-    description: 'A decade of pioneering solar engineering & scientific consultation.'
+    description: 'Over 7 years of trusted solar engineering & scientific consultation.'
   },
   {
-    id: 'stat-projects',
-    value: 1500,
+    id: 'stat-residential',
+    value: 150,
     suffix: '+',
-    label: 'Projects Completed',
-    iconName: 'sun',
-    description: 'Residential rooftops, commercial plants & rural installations.'
+    label: 'Residential Customers',
+    iconName: 'home',
+    description: 'Independent homes, villas, and housing societies powered by solar.'
   },
   {
-    id: 'stat-customers',
-    value: 2500,
+    id: 'stat-commercial',
+    value: 175,
     suffix: '+',
-    label: 'Customers Served',
-    iconName: 'users',
-    description: 'Families, farm owners, institutions, and growing businesses.'
+    label: 'Commercial Customers',
+    iconName: 'building',
+    description: 'Commercial establishments, industries, institutions, and businesses.'
   }
 ];
 

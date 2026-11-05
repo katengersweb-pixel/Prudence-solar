@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Calendar, Sun, Users } from 'lucide-react';
+import { Calendar, Sun, Users, Home, Building2 } from 'lucide-react';
 import { COMPANY_STATS } from '../data/solarData';
 import './StatsSection.css';
 
@@ -7,8 +7,8 @@ export const StatsSection: React.FC = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [counts, setCounts] = useState<{ [key: string]: number }>({
     'stat-experience': 0,
-    'stat-projects': 0,
-    'stat-customers': 0
+    'stat-residential': 0,
+    'stat-commercial': 0
   });
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -55,10 +55,14 @@ export const StatsSection: React.FC = () => {
     switch (iconName) {
       case 'calendar':
         return <Calendar size={28} className="stat-card-icon" />;
-      case 'sun':
-        return <Sun size={30} className="stat-card-icon" />;
+      case 'home':
+        return <Home size={28} className="stat-card-icon" />;
+      case 'building':
+        return <Building2 size={28} className="stat-card-icon" />;
       case 'users':
         return <Users size={28} className="stat-card-icon" />;
+      case 'sun':
+        return <Sun size={30} className="stat-card-icon" />;
       default:
         return <Sun size={28} className="stat-card-icon" />;
     }

@@ -15,7 +15,7 @@ export interface StatItem {
   value: number;
   suffix: string;
   label: string;
-  iconName: 'calendar' | 'sun' | 'users';
+  iconName: 'calendar' | 'sun' | 'users' | 'home' | 'building';
   description?: string;
 }
 
