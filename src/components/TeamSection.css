@@ -4,35 +4,92 @@
   padding: 80px 0;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+/* Header Row */
+.team-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.team-title-wrap {
+  max-width: 680px;
 }
 
 .team-main-title {
   font-size: 2.25rem;
   font-weight: 800;
   color: var(--navy);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+  line-height: 1.25;
 }
 
 .team-subtitle {
   font-size: 1.05rem;
   color: var(--text-body);
-  max-width: 680px;
-  margin: 0 auto 36px auto;
+  margin: 0;
   line-height: 1.55;
+}
+
+/* Navigation Controls (Left-to-Right / Right-to-Left / Pause) */
+.team-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.team-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.team-nav-btn:hover {
+  background: var(--navy);
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.team-nav-btn.active-nav {
+  background: var(--navy);
+  color: #FFFFFF;
+  border-color: var(--navy);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+}
+
+.pause-toggle-btn {
+  border-radius: 12px;
+  width: auto;
+  padding: 0 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 /* Category Filter Tabs */
 .team-filter-tabs {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .team-filter-btn {
-  padding: 9px 18px;
+  padding: 8px 18px;
   border-radius: 9999px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -56,30 +113,89 @@
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
-/* Team Grid */
-.team-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  max-width: 1100px;
-  margin: 0 auto 48px auto;
+/* Continuous Infinite Loop Carousel */
+.team-loop-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 36px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
+  cursor: grab;
 }
 
-/* Member Card */
-.team-member-card {
+.team-loop-wrapper:active {
+  cursor: grabbing;
+}
+
+.team-loop-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  user-select: none;
+}
+
+.team-loop-group {
+  display: flex;
+  gap: 28px;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+/* Left to Right Infinite Animation (Requested default) */
+.team-loop-track.direction-left-to-right .team-loop-group {
+  animation: teamLoopScrollLeftToRight 40s linear infinite;
+}
+
+/* Right to Left Infinite Animation */
+.team-loop-track.direction-right-to-left .team-loop-group {
+  animation: teamLoopScrollRightToLeft 40s linear infinite;
+}
+
+/* Pause on hover, pause button, touch, or active modal */
+.team-loop-wrapper:hover .team-loop-group,
+.team-loop-wrapper.is-paused .team-loop-group,
+body:has(.team-modal-backdrop) .team-loop-group {
+  animation-play-state: paused;
+}
+
+/* Keyframes: Moving Left to Right */
+@keyframes teamLoopScrollLeftToRight {
+  0% {
+    transform: translateX(calc(-100% - 28px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes: Moving Right to Left */
+@keyframes teamLoopScrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 28px));
+  }
+}
+
+/* Horizontal Carousel Member Card */
+.team-carousel-card {
+  flex: 0 0 380px;
+  width: 380px;
   background: #FFFFFF;
   border-radius: 20px;
   border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.team-member-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+.team-carousel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
   border-color: #CBD5E1;
 }
 
@@ -87,8 +203,9 @@
 .member-avatar-container {
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 250px;
   overflow: hidden;
+  background: #0F172A;
 }
 
 .avatar-media-box {
@@ -104,12 +221,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  transition: transform 0.35s ease;
+  transition: transform 0.4s ease;
 }
 
-.team-member-card:hover .member-photo {
-  transform: scale(1.03);
+.team-carousel-card:hover .member-photo {
+  transform: scale(1.04);
 }
 
 /* Fallback / Coming Soon Avatar */
@@ -360,8 +476,7 @@
   border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 18px 24px;
-  max-width: 1100px;
-  margin: 0 auto;
+  margin-top: 16px;
 }
 
 .trust-banner-item {
@@ -436,9 +551,9 @@
 }
 
 .modal-header-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -638,9 +753,9 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .team-cards-grid {
-    grid-template-columns: 1fr;
-    max-width: 580px;
+  .team-carousel-card {
+    flex: 0 0 340px;
+    width: 340px;
   }
   .modal-expertise-grid {
     grid-template-columns: 1fr;
@@ -654,8 +769,12 @@
   .team-main-title {
     font-size: 1.8rem;
   }
+  .team-carousel-card {
+    flex: 0 0 300px;
+    width: 300px;
+  }
   .member-avatar-container {
-    height: 190px;
+    height: 220px;
   }
   .team-modal-header {
     flex-direction: column;
@@ -677,4 +796,3 @@
     align-items: flex-start;
   }
 }
-
