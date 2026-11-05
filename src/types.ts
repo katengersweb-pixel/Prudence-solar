@@ -80,3 +80,12 @@ export interface EnquiryFormData {
   solution?: string;
   city?: string;
 }
+
+export interface G2G3PackageTier {
+  capacity: number;
+  grossPrice: number;
+  subsidy: number;
+  netPrice: number;
+  phase: string;
+  notes?: string;
+}

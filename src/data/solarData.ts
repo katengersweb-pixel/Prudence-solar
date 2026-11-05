@@ -1,4 +1,4 @@
-import type { ProductItem, StatItem, GalleryItem, ReviewItem, HeroSlide, OfficeLocation } from '../types';
+import type { ProductItem, StatItem, GalleryItem, ReviewItem, HeroSlide, OfficeLocation, G2G3PackageTier } from '../types';
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
@@ -286,3 +286,105 @@ export const CONTACT_INFO = {
   whatsappNumber: '+919515969797',
   whatsappText: 'Hello Prudence Industries, I would like to enquire about solar solutions for my property.'
 };
+
+/**
+ * Official Promotional Package Prices for DCR N-Type TOPCon Bifacial Solar
+ * On-Grid Rooftop Systems for G+2 / G+3 Building (Elevated Structure) - GST Included.
+ */
+export const G2_G3_PACKAGES: G2G3PackageTier[] = [
+  { capacity: 1, grossPrice: 96000, subsidy: 30000, netPrice: 66000, phase: 'Single' },
+  { capacity: 2, grossPrice: 169000, subsidy: 60000, netPrice: 109000, phase: 'Single' },
+  { capacity: 3, grossPrice: 229000, subsidy: 78000, netPrice: 151000, phase: 'As approved' },
+  { capacity: 4, grossPrice: 274000, subsidy: 78000, netPrice: 196000, phase: 'As approved' },
+  { capacity: 5, grossPrice: 334000, subsidy: 78000, netPrice: 256000, phase: 'Single phase', notes: '3-Phase available at ₹3,55,000' },
+  { capacity: 6, grossPrice: 428000, subsidy: 78000, netPrice: 350000, phase: 'Three phase' },
+  { capacity: 7, grossPrice: 482000, subsidy: 78000, netPrice: 404000, phase: 'Three phase' },
+  { capacity: 8, grossPrice: 534000, subsidy: 78000, netPrice: 456000, phase: 'Three phase' },
+  { capacity: 9, grossPrice: 593000, subsidy: 78000, netPrice: 515000, phase: 'Three phase' },
+  { capacity: 10, grossPrice: 656000, subsidy: 78000, netPrice: 578000, phase: 'Three phase' }
+];
+
+export interface SolarEstimateResult {
+  grossPrice: number;
+  subsidy: number;
+  netPrice: number;
+  phase: string;
+  structure: string;
+  isExactPackage: boolean;
+}
+
+/**
+ * Calculate solar system costs based on official G+2 / G+3 Building pricing table.
+ */
+export function calculateG2G3Estimate(capacity: number, isCommercial: boolean = false): SolarEstimateResult {
+  if (isCommercial) {
+    const grossPrice = Math.round(capacity * 55000);
+    return {
+      grossPrice,
+      subsidy: 0,
+      netPrice: grossPrice,
+      phase: capacity >= 5 ? 'Three phase' : 'As approved',
+      structure: 'Commercial Rooftop Structure',
+      isExactPackage: false
+    };
+  }
+
+  // Exact package match check
+  const exactMatch = G2_G3_PACKAGES.find((p) => p.capacity === capacity);
+  if (exactMatch) {
+    return {
+      grossPrice: exactMatch.grossPrice,
+      subsidy: exactMatch.subsidy,
+      netPrice: exactMatch.netPrice,
+      phase: exactMatch.phase,
+      structure: 'G+2 / G+3 Building (Elevated Structure)',
+      isExactPackage: true
+    };
+  }
+
+  let grossPrice: number;
+  let phase = 'Single';
+
+  if (capacity <= 1) {
+    grossPrice = 96000;
+    phase = 'Single';
+  } else if (capacity >= 10) {
+    // 10 kW package is 6,56,000; additional capacity at 65,600/kW
+    grossPrice = Math.round(656000 + (capacity - 10) * 65600);
+    phase = 'Three phase';
+  } else {
+    // Linear interpolation between the two adjacent integer tiers
+    const lower = G2_G3_PACKAGES.filter((p) => p.capacity <= capacity).pop() || G2_G3_PACKAGES[0];
+    const upper = G2_G3_PACKAGES.find((p) => p.capacity > capacity) || G2_G3_PACKAGES[G2_G3_PACKAGES.length - 1];
+
+    if (lower.capacity === upper.capacity) {
+      grossPrice = lower.grossPrice;
+      phase = lower.phase;
+    } else {
+      const fraction = (capacity - lower.capacity) / (upper.capacity - lower.capacity);
+      grossPrice = Math.round(lower.grossPrice + fraction * (upper.grossPrice - lower.grossPrice));
+      phase = upper.phase;
+    }
+  }
+
+  // PM Surya Ghar CFA Subsidy
+  let subsidy = 0;
+  if (capacity >= 3) {
+    subsidy = 78000;
+  } else if (capacity >= 2) {
+    subsidy = 60000;
+  } else if (capacity >= 1) {
+    subsidy = 30000;
+  }
+
+  const netPrice = Math.max(0, grossPrice - subsidy);
+
+  return {
+    grossPrice,
+    subsidy,
+    netPrice,
+    phase,
+    structure: 'G+2 / G+3 Building (Elevated Structure)',
+    isExactPackage: false
+  };
+}
