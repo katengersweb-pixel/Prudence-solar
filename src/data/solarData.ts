@@ -402,7 +402,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     roleCategoryLabel: 'Executive Leadership',
     initials: 'CR',
     avatarColor: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%)',
-    image: '/assets/team/challa-rajasekharareddy.svg',
+    image: '/assets/team/challa-rajasekharareddy.jpg',
+    imagePosition: 'center 12%',
     shortBio:
       'Spearheading strategic vision, research-driven solar engineering, and high-efficiency photovoltaic deployments across residential and commercial sectors.',
     fullBio: [

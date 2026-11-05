@@ -103,4 +103,5 @@ export interface TeamMember {
   initials: string;
   avatarColor: string;
   image: string;
+  imagePosition?: string;
 }

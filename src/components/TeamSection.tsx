@@ -102,6 +102,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onConsultClick }) => {
                         src={member.image}
                         alt={`${member.name} - ${member.designation}`}
                         className="member-photo"
+                        style={{ objectPosition: member.imagePosition || 'center 20%' }}
                         onError={() => handleImageError(member.id)}
                         loading="lazy"
                       />
@@ -232,6 +233,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onConsultClick }) => {
                     src={selectedMember.image}
                     alt={selectedMember.name}
                     className="modal-photo"
+                    style={{ objectPosition: selectedMember.imagePosition || 'center 20%' }}
                     onError={() => handleImageError(selectedMember.id)}
                   />
                 ) : (
@@ -312,3 +314,4 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onConsultClick }) => {
     </section>
   );
 };
+
