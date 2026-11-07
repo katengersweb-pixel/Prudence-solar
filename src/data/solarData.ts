@@ -452,7 +452,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     roleCategoryLabel: 'Engineering & Installation Lead',
     initials: 'SN',
     avatarColor: 'linear-gradient(135deg, #1E5114 0%, #4D922D 100%)',
-    image: '/assets/team/satyanarayana.svg',
+    image: '/assets/team/satyanarayana.jpg',
+    imagePosition: 'center 15%',
     shortBio:
       'Leading electrical engineering, high-voltage grid synchronization, and structural design validation for zero-loss rooftop performance.',
     fullBio: [
