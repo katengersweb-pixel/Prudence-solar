@@ -546,7 +546,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     roleCategoryLabel: 'Executive Leadership',
     initials: 'SS',
     avatarColor: 'linear-gradient(135deg, #102B50 0%, #1E3A8A 100%)',
-    image: '/assets/team/saiempu-swapna.svg',
+    image: '/assets/team/saiempu-swapna.jpg',
+    imagePosition: 'center 15%',
     shortBio:
       'Guiding corporate governance, financial strategy, and end-to-end PM Surya Ghar government subsidy coordination for swift, hassle-free approvals.',
     fullBio: [
