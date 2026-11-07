@@ -5,6 +5,7 @@ import { AboutSection } from './components/AboutSection';
 import { StatsSection } from './components/StatsSection';
 import { SuryaGharSection } from './components/SuryaGharSection';
 import { CalculatorSection } from './components/CalculatorSection';
+import { PricingSpecsSection } from './components/PricingSpecsSection';
 import { ProductsSection } from './components/ProductsSection';
 import { GallerySection } from './components/GallerySection';
 import { TeamSection } from './components/TeamSection';
@@ -114,6 +115,9 @@ export const App: React.FC = () => {
 
         {/* 6. Interactive Solar Savings Calculator */}
         <CalculatorSection onApplyEstimate={handleApplyEstimate} />
+
+        {/* 6.5 Pricing & Technical Specifications */}
+        <PricingSpecsSection onGetQuote={() => handleOpenQuoteModal('G+2 / G+3 Solar Rooftop Package')} />
 
         {/* 7. Solar Products Showcase (6 cards) */}
         <ProductsSection onProductSelect={handleProductSelect} />
