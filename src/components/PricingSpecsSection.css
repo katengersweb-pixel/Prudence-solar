@@ -1,356 +1,150 @@
-/* Pricing & Technical Specifications Section */
+/* Clean, Simple Pricing & Technical Specifications */
 .pricing-specs-section {
   background-color: #FFFFFF;
-  padding: 85px 0 95px 0;
+  padding: 48px 0 54px 0;
   position: relative;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
 }
 
-.specs-main-title {
+.specs-header {
+  margin-bottom: 32px;
+}
+
+.specs-title {
   font-family: var(--font-heading);
-  font-size: 2.35rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--navy);
-  margin-bottom: 14px;
-  line-height: 1.2;
-}
-
-.specs-subtitle {
-  font-size: 1.05rem;
-  color: var(--text-body);
-  max-width: 680px;
-  margin: 0 auto;
-  line-height: 1.55;
-}
-
-/* 3 Feature Cards Grid */
-.specs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-top: 50px;
-  margin-bottom: 44px;
-}
-
-/* Individual Spec Card */
-.spec-card {
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 20px;
-  padding: 34px 28px 26px 28px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: all var(--transition-smooth);
-  box-shadow: 0 4px 16px rgba(16, 43, 80, 0.05);
-}
-
-.spec-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(16, 43, 80, 0.1);
-  border-color: rgba(77, 146, 45, 0.4);
-}
-
-/* Accent Top Border on Hover */
-.spec-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 24px;
-  right: 24px;
-  height: 3px;
-  border-radius: 0 0 4px 4px;
-  transition: background 0.3s ease;
-}
-
-.spec-card-pricing::before {
-  background: transparent;
-}
-.spec-card-pricing:hover::before {
-  background: var(--solar-yellow);
-}
-
-.spec-card-copper::before {
-  background: transparent;
-}
-.spec-card-copper:hover::before {
-  background: #2563EB;
-}
-
-.spec-card-structures::before {
-  background: transparent;
-}
-.spec-card-structures:hover::before {
-  background: var(--green);
-}
-
-/* Card Top Row */
-.spec-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 22px;
-}
-
-.spec-icon-wrapper {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-fast);
-}
-
-.spec-card:hover .spec-icon-wrapper {
-  transform: scale(1.08);
-}
-
-.spec-icon-pricing {
-  background: #FFF8E7;
-  color: #D97706;
-}
-
-.spec-icon-copper {
-  background: #EFF6FF;
-  color: #1E40AF;
-}
-
-.spec-icon-structures {
-  background: #F0FDF4;
-  color: #15803D;
-}
-
-.spec-pill-badge {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 9999px;
-  line-height: 1.2;
-}
-
-.spec-pill-pricing {
-  background: #FFFBEB;
-  color: #B45309;
-  border: 1px solid #FDE68A;
-}
-
-.spec-pill-copper {
-  background: #EFF6FF;
-  color: #1D4ED8;
-  border: 1px solid #BFDBFE;
-}
-
-.spec-pill-structures {
-  background: #F0FDF4;
-  color: #15803D;
-  border: 1px solid #BBF7D0;
-}
-
-/* Card Title & Description */
-.spec-card-title {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 10px;
+  margin-top: 6px;
   line-height: 1.25;
 }
 
-.spec-card-desc {
-  font-size: 0.885rem;
-  color: var(--text-body);
-  line-height: 1.55;
-  margin-bottom: 22px;
+/* 3-Column Grid */
+.specs-simple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Features List */
-.spec-features-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px 0;
+/* Individual Card */
+.spec-simple-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 22px 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(16, 43, 80, 0.04);
+}
+
+.spec-simple-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--green);
+  box-shadow: 0 8px 20px rgba(16, 43, 80, 0.08);
+}
+
+/* Header Row: Icon + Title */
+.spec-header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.spec-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.spec-card-heading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Clean Bullet List */
+.spec-clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   flex: 1;
 }
 
-.spec-features-list li {
+.spec-clean-list li {
   display: flex;
   align-items: flex-start;
-  gap: 11px;
+  gap: 10px;
   font-size: 0.875rem;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--text-body);
 }
 
-.spec-check-icon {
+.spec-check {
   color: var(--green);
   flex-shrink: 0;
   margin-top: 3px;
 }
 
-.spec-features-list strong {
+.spec-clean-list strong {
   color: var(--navy);
-  font-weight: 700;
-  margin-right: 4px;
+  font-weight: 600;
 }
 
-.spec-suboptions {
+/* Sub-list inside Card 3 */
+.spec-sublist {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.suboption-item {
+  gap: 4px;
+  margin-top: 5px;
   font-size: 0.8125rem;
-  color: #334155;
-  background: #F8FAFC;
-  padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid var(--border-light);
-  line-height: 1.45;
+  color: #475569;
 }
 
-.suboption-item em {
+.spec-sublist span {
+  background: #F8FAFC;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+  display: block;
+}
+
+.spec-sublist em {
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--green-dark);
 }
 
-/* Card Footer Chip */
-.spec-card-footer {
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid var(--border-light);
-}
-
-.spec-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--navy);
-  background: #F8FAFC;
-  padding: 8px 14px;
-  border-radius: 9999px;
-  border: 1px solid var(--border-light);
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-}
-
-.spec-chip svg {
-  color: var(--green);
-  flex-shrink: 0;
-}
-
-/* Bottom Banner */
-.specs-bottom-banner {
-  background: linear-gradient(135deg, #0A1C34 0%, #102B50 100%);
-  border-radius: 20px;
-  padding: 30px 36px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  color: #FFFFFF;
-  box-shadow: 0 10px 25px rgba(16, 43, 80, 0.15);
-}
-
-.specs-banner-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.specs-banner-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: rgba(77, 146, 45, 0.25);
-  border: 1px solid rgba(77, 146, 45, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #4ADE80;
-  flex-shrink: 0;
-}
-
-.specs-banner-text h4 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin: 0 0 6px 0;
-}
-
-.specs-banner-text p {
-  font-size: 0.92rem;
-  color: #CBD5E1;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 650px;
-}
-
-.specs-banner-btn {
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .specs-grid {
+/* Responsive */
+@media (max-width: 960px) {
+  .specs-simple-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
 
-  .specs-bottom-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 26px;
-  }
-
-  .specs-banner-btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
   .pricing-specs-section {
-    padding: 60px 0 70px 0;
+    padding: 36px 0 42px 0;
   }
 
-  .specs-main-title {
-    font-size: 1.85rem;
-  }
-
-  .spec-card {
-    padding: 24px 20px;
-  }
-
-  .spec-icon-wrapper {
-    width: 48px;
-    height: 48px;
-  }
-
-  .spec-pill-badge {
-    font-size: 0.65rem;
-    padding: 4px 10px;
-  }
-
-  .spec-card-title {
-    font-size: 1.2rem;
-  }
-
-  .specs-banner-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+  .specs-title {
+    font-size: 1.6rem;
   }
 }
