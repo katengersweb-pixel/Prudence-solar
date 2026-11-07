@@ -177,15 +177,134 @@ export const PRODUCTS: ProductItem[] = [
   }
 ];
 
-export const GALLERY_ITEMS: GalleryItem[] = Array.from({ length: 15 }, (_, i) => ({
-  id: `gal-${i + 1}`,
-  title: `Solar Installation ${i + 1}`,
-  location: 'Varanasi & UP',
-  capacity: 'Rooftop Solar',
-  category: 'Residential & Commercial',
-  image: `/assets/gallery/installation-${i + 1}.jpg`,
-  description: 'On-site rooftop solar installation engineered by Prudence Solar & Scientific Solutions.'
-}));
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'gal-1',
+    title: '3 kW Residential Rooftop Solar Plant',
+    location: 'Hyderabad, Telangana',
+    capacity: '3 kW On-Grid',
+    category: 'Residential',
+    image: '/assets/gallery/installation-3.jpg',
+    description: 'Elevated hot-dip galvanized rooftop structure with DCR bifacial panels and high-yield generation.'
+  },
+  {
+    id: 'gal-2',
+    title: 'Elevated Structure Foundation & Pedestals',
+    location: 'Secunderabad, Telangana',
+    capacity: '5 kW Structural Base',
+    category: 'Residential',
+    image: '/assets/gallery/installation-2.jpg',
+    description: 'Reinforced concrete pedestals ensuring zero terrace puncture and maximum wind resistance.'
+  },
+  {
+    id: 'gal-3',
+    title: '4 kW Home Solar Installation',
+    location: 'Chirala, Andhra Pradesh',
+    capacity: '4 kW On-Grid',
+    category: 'Residential',
+    image: '/assets/gallery/installation-8.jpg',
+    description: 'PM Surya Ghar subsidy-approved residential rooftop solar installation with high customer satisfaction.'
+  },
+  {
+    id: 'gal-4',
+    title: 'Polycab On-Grid Inverter & Protection Units',
+    location: 'Warangal, Telangana',
+    capacity: 'Inverter & ACDB/DCDB',
+    category: 'Commercial & Residential',
+    image: '/assets/gallery/installation-10.jpg',
+    description: 'Class-II SPD surge protection, dual earthing, and high-efficiency smart solar inverter.'
+  },
+  {
+    id: 'gal-5',
+    title: 'Solar Power Backup & Hybrid Inverter Room',
+    location: 'Khammam, Telangana',
+    capacity: 'Hybrid Inverter Setup',
+    category: 'Residential',
+    image: '/assets/gallery/installation-13.jpg',
+    description: 'Safe indoor battery and inverter room layout with clean cable management and industrial circuit breakers.'
+  },
+  {
+    id: 'gal-6',
+    title: 'Heavy-Duty Rooftop Solar Array',
+    location: 'Guntur, Andhra Pradesh',
+    capacity: '5 kW Elevated Structure',
+    category: 'Residential',
+    image: '/assets/gallery/installation-7.jpg',
+    description: 'Hot-dip galvanized structure with optimal south-facing azimuth angle for all-season peak generation.'
+  },
+  {
+    id: 'gal-7',
+    title: 'Commissioned Solar Inverter & Grid Sync',
+    location: 'Hyderabad, Telangana',
+    capacity: '3 kW Grid-Tied System',
+    category: 'Residential',
+    image: '/assets/gallery/installation-9.jpg',
+    description: 'Fully inspected and commissioned net-metering solar system delivering up to 90% monthly bill savings.'
+  },
+  {
+    id: 'gal-8',
+    title: 'Commercial Rooftop Solar at Retail Complex',
+    location: 'Vijayawada, Andhra Pradesh',
+    capacity: '10 kW Commercial',
+    category: 'Commercial',
+    image: '/assets/gallery/installation-5.jpg',
+    description: 'Elevated commercial solar plant over retail store, maximizing daytime operational power offset.'
+  },
+  {
+    id: 'gal-9',
+    title: 'Residential Rooftop Solar System',
+    location: 'Secunderabad, Telangana',
+    capacity: '3.3 kW On-Grid',
+    category: 'Residential',
+    image: '/assets/gallery/installation-1.jpg',
+    description: 'Complete PM Surya Ghar handover with high-efficiency Tier-1 solar modules.'
+  },
+  {
+    id: 'gal-10',
+    title: 'Precision Structural Underside & Framing',
+    location: 'Hyderabad, Telangana',
+    capacity: 'Engineering Detail',
+    category: 'Technical Engineering',
+    image: '/assets/gallery/installation-15.jpg',
+    description: 'Heavy-duty C-channel framing and anodized aluminum clamps engineered for 150+ km/h wind loads.'
+  },
+  {
+    id: 'gal-11',
+    title: '100% Copper Earthing & Inverter Wiring',
+    location: 'Nalgonda, Telangana',
+    capacity: 'Electrical Commissioning',
+    category: 'Technical Engineering',
+    image: '/assets/gallery/installation-4.jpg',
+    description: 'Certified 1 Core × 6 sq. mm pure copper grounding and MNRE-compliant distribution cabling.'
+  },
+  {
+    id: 'gal-12',
+    title: 'Sunset View of Completed Rooftop Solar Plant',
+    location: 'Bapatla District, Andhra Pradesh',
+    capacity: '5 kW On-Grid',
+    category: 'Residential',
+    image: '/assets/gallery/installation-12.jpg',
+    description: 'Zero-maintenance rooftop solar installation providing green energy and direct electricity savings.'
+  },
+  {
+    id: 'gal-13',
+    title: 'Evening Commissioning & Inspection',
+    location: 'Khammam, Telangana',
+    capacity: '4 kW Night View',
+    category: 'Residential',
+    image: '/assets/gallery/installation-14.jpg',
+    description: 'Final engineering quality check and verification of module stability and cable connections.'
+  },
+  {
+    id: 'gal-14',
+    title: 'High-Efficiency Terrace Solar Installation',
+    location: 'Hyderabad, Telangana',
+    capacity: '3 kW On-Grid',
+    category: 'Residential',
+    image: '/assets/gallery/installation-11.jpg',
+    description: 'Elevated G+2 terrace installation allowing full usable terrace space below the panels.'
+  }
+];
 
 export const REVIEWS: ReviewItem[] = [
   {
