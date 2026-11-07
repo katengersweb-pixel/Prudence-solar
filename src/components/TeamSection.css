@@ -1,496 +1,205 @@
-.team-section {
-  background-color: #FFFFFF;
+/* Team Section - Clean Aesthetic matching Reference Image */
+.team-modern-section {
+  background-color: #FAF6F0;
+  padding: 85px 0 95px 0;
   position: relative;
-  padding: 80px 0;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
-  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* Header Row */
-.team-header-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
+/* Header */
+.team-modern-header {
+  margin-bottom: 56px;
 }
 
-.team-title-wrap {
-  max-width: 680px;
-}
-
-.team-main-title {
-  font-size: 2.25rem;
+.team-pill-badge {
+  display: inline-block;
+  background: #FCEBEA;
+  color: #8A1515;
+  font-size: 0.78rem;
   font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 12px;
-  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
 }
 
-.team-subtitle {
+.team-modern-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #18181B;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.team-modern-subtitle {
   font-size: 1.05rem;
-  color: var(--text-body);
-  margin: 0;
+  color: #52525B;
+  max-width: 620px;
+  margin: 0 auto;
   line-height: 1.55;
 }
 
-/* Navigation Controls (Left-to-Right / Right-to-Left / Pause) */
-.team-nav-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* 4-Item Grid */
+.team-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.team-nav-btn {
-  width: 44px;
-  height: 44px;
+/* Individual Expert Card */
+.expert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  outline: none;
+}
+
+.expert-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Circular Avatar */
+.expert-avatar-wrapper {
+  position: relative;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  color: var(--navy);
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.14), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.expert-card:hover .expert-avatar-wrapper {
+  box-shadow: 0 16px 36px -4px rgba(138, 21, 21, 0.22), 0 6px 14px -2px rgba(0, 0, 0, 0.08);
+  transform: scale(1.03);
+}
+
+.expert-avatar-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4.5px solid #FFFFFF;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.team-nav-btn:hover {
-  background: var(--navy);
-  color: #FFFFFF;
-  transform: scale(1.06);
-}
-
-.team-nav-btn.active-nav {
-  background: var(--navy);
-  color: #FFFFFF;
-  border-color: var(--navy);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
-}
-
-.pause-toggle-btn {
-  border-radius: 12px;
-  width: auto;
-  padding: 0 14px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-/* Category Filter Tabs */
-.team-filter-tabs {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 36px;
-}
-
-.team-filter-btn {
-  padding: 8px 18px;
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-light);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.team-filter-btn:hover {
-  background: #F1F5F9;
-  color: var(--navy);
-  border-color: #CBD5E1;
-}
-
-.team-filter-btn.active {
-  background: var(--navy);
-  color: #FFFFFF;
-  border-color: var(--navy);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
-}
-
-/* Continuous Infinite Loop Carousel */
-.team-loop-wrapper {
   position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 10px 0 36px 0;
-  mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
-  cursor: grab;
-}
-
-.team-loop-wrapper:active {
-  cursor: grabbing;
-}
-
-.team-loop-track {
-  display: flex;
-  gap: 28px;
-  width: max-content;
-  user-select: none;
-}
-
-.team-loop-group {
-  display: flex;
-  gap: 28px;
-  flex-shrink: 0;
-  will-change: transform;
-}
-
-/* Right to Left Infinite Animation (Default) */
-.team-loop-track.direction-right-to-left .team-loop-group {
-  animation: teamLoopScrollRightToLeft 36s linear infinite;
-}
-
-/* Left to Right Infinite Animation */
-.team-loop-track.direction-left-to-right .team-loop-group {
-  animation: teamLoopScrollLeftToRight 36s linear infinite;
-}
-
-/* Pause on hover, pause button, touch, or active modal */
-.team-loop-wrapper:hover .team-loop-group,
-.team-loop-wrapper.is-paused .team-loop-group,
-body:has(.team-modal-backdrop) .team-loop-group {
-  animation-play-state: paused;
-}
-
-/* Keyframes: Moving Left to Right */
-@keyframes teamLoopScrollLeftToRight {
-  0% {
-    transform: translateX(calc(-100% - 28px));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* Keyframes: Moving Right to Left */
-@keyframes teamLoopScrollRightToLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% - 28px));
-  }
-}
-
-/* Horizontal Carousel Member Card */
-.team-carousel-card {
-  flex: 0 0 380px;
-  width: 380px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.team-carousel-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-  border-color: #CBD5E1;
-}
-
-/* Avatar Top Area */
-.member-avatar-container {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
   background: #0F172A;
 }
 
-.avatar-media-box {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.member-photo {
+.expert-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.team-carousel-card:hover .member-photo {
-  transform: scale(1.04);
+.expert-card:hover .expert-photo {
+  transform: scale(1.05);
 }
 
-/* Fallback / Coming Soon Avatar */
-.avatar-fallback-placeholder {
+/* Fallback Initials when photo not yet uploaded */
+.expert-fallback-initials {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 20px;
-  text-align: center;
-}
-
-.avatar-initials-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.avatar-initials {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 800;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
   color: #FFFFFF;
-  letter-spacing: 1px;
 }
 
-.photo-placeholder-note {
+.initials-text {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.initials-sub {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.725rem;
+  gap: 4px;
+  font-size: 0.65rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
   background: rgba(0, 0, 0, 0.25);
-  padding: 4px 12px;
+  padding: 2px 8px;
   border-radius: 9999px;
   backdrop-filter: blur(4px);
 }
 
-/* Overlaid Badges */
-.member-role-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 5px 12px;
-  border-radius: 9999px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.member-role-badge.leadership {
-  background: rgba(15, 23, 42, 0.85);
-  color: #F8FAFC;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.member-role-badge.technical {
-  background: rgba(46, 125, 50, 0.9);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.member-degree-pill {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  background: #FFFFFF;
-  color: var(--navy);
-  padding: 5px 12px;
-  border-radius: 9999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  border: 1px solid #E2E8F0;
-}
-
-/* Card Body */
-.member-content-body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.member-name-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.member-name {
+/* Name */
+.expert-name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   font-weight: 800;
-  color: var(--navy);
-  margin: 0;
+  color: #18181B;
+  margin: 18px 0 4px 0;
   line-height: 1.25;
+  transition: color 0.2s ease;
 }
 
-.member-qual-sub {
-  font-size: 0.8rem;
+.expert-card:hover .expert-name {
+  color: #8A1515;
+}
+
+/* Qualification in Red Accent */
+.expert-degree {
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--green-dark);
-  white-space: nowrap;
+  color: #8A1515;
+  margin-bottom: 12px;
+  letter-spacing: 0.2px;
 }
 
-.member-designation {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #475569;
-  margin-bottom: 14px;
-}
-
-.designation-icon {
-  color: var(--green);
-  flex-shrink: 0;
-}
-
-.member-short-bio {
-  font-size: 0.875rem;
-  color: var(--text-body);
-  line-height: 1.5;
-  margin-bottom: 18px;
-  flex: 1;
-}
-
-/* Core Focus Areas */
-.member-expertise-list {
-  background: #F8FAFC;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 20px;
-}
-
-.expertise-heading {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 8px;
+/* Role Capsule Badge in Red matching Reference */
+.expert-role-badge {
+  background: #8A1515;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(138, 21, 21, 0.28);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  line-height: 1.2;
 }
 
-.expertise-tags-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.expert-card:hover .expert-role-badge {
+  background: #6D0E0E;
+  transform: scale(1.03);
 }
 
-.expertise-tag {
-  font-size: 0.725rem;
+/* Tap Hint */
+.expert-tap-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
   font-weight: 600;
-  background: #FFFFFF;
-  color: #334155;
-  padding: 3px 8px;
-  border-radius: 6px;
-  border: 1px solid #E2E8F0;
+  color: #71717A;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
-.expertise-tag.more-tag {
-  background: #EFF6FF;
-  color: #1D4ED8;
-  border-color: #BFDBFE;
-  font-weight: 700;
-}
-
-/* Action Buttons Row */
-.member-actions-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.btn-know-more {
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--navy);
-  background: #FFFFFF;
-  border: 1.5px solid var(--navy);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.btn-know-more:hover {
-  background: var(--navy);
-  color: #FFFFFF;
-}
-
-.btn-consult-member {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background: var(--green);
-  border: 1.5px solid var(--green);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.btn-consult-member:hover {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
-}
-
-/* Trust Banner at Bottom */
-.team-trust-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 16px;
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 18px 24px;
-  margin-top: 16px;
-}
-
-.trust-banner-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.trust-icon {
-  color: var(--green);
-  flex-shrink: 0;
+.expert-card:hover .expert-tap-hint {
+  opacity: 1;
 }
 
 /* Modal Dialog */
@@ -551,15 +260,16 @@ body:has(.team-modal-backdrop) .team-loop-group {
 }
 
 .modal-header-avatar {
-  width: 76px;
-  height: 76px;
-  border-radius: 18px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .modal-photo {
@@ -595,18 +305,8 @@ body:has(.team-modal-backdrop) .team-loop-group {
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-}
-
-.modal-role-badge.leadership {
-  background: #EFF6FF;
-  color: #1E40AF;
-  border: 1px solid #BFDBFE;
-}
-
-.modal-role-badge.technical {
-  background: #F0FDF4;
-  color: #166534;
-  border: 1px solid #BBF7D0;
+  background: #FCEBEA;
+  color: #8A1515;
 }
 
 .modal-qual-badge {
@@ -615,11 +315,11 @@ body:has(.team-modal-backdrop) .team-loop-group {
   gap: 4px;
   font-size: 0.72rem;
   font-weight: 800;
-  background: #FEF3C7;
-  color: #92400E;
+  background: #EFF6FF;
+  color: #1E40AF;
   padding: 3px 10px;
   border-radius: 9999px;
-  border: 1px solid #FDE68A;
+  border: 1px solid #BFDBFE;
 }
 
 .modal-name {
@@ -633,7 +333,7 @@ body:has(.team-modal-backdrop) .team-loop-group {
 .modal-designation {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--green-dark);
+  color: #8A1515;
   margin: 0;
 }
 
@@ -749,50 +449,98 @@ body:has(.team-modal-backdrop) .team-loop-group {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background: var(--green);
+  color: #FFFFFF;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .team-carousel-card {
-    flex: 0 0 340px;
-    width: 340px;
-  }
-  .modal-expertise-grid {
-    grid-template-columns: 1fr;
+.btn-modal-consult:hover {
+  background: var(--green-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .team-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+    max-width: 680px;
   }
 }
 
 @media (max-width: 600px) {
-  .team-section {
-    padding: 60px 0;
+  .team-modern-section {
+    padding: 60px 0 70px 0;
   }
-  .team-main-title {
-    font-size: 1.8rem;
+
+  .team-modern-title {
+    font-size: 1.9rem;
   }
-  .team-carousel-card {
-    flex: 0 0 300px;
-    width: 300px;
+
+  .team-modern-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
   }
-  .member-avatar-container {
-    height: 220px;
+
+  .team-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 12px;
   }
+
+  .expert-avatar-circle {
+    width: 136px;
+    height: 136px;
+    border-width: 3.5px;
+  }
+
+  .initials-text {
+    font-size: 2rem;
+  }
+
+  .expert-name {
+    font-size: 0.95rem;
+    margin: 12px 0 3px 0;
+  }
+
+  .expert-degree {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .expert-role-badge {
+    font-size: 0.58rem;
+    padding: 5px 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .expert-tap-hint {
+    opacity: 0.85;
+    font-size: 0.65rem;
+    margin-top: 6px;
+  }
+
   .team-modal-header {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
   }
+
   .modal-close-btn {
     top: 14px;
     right: 14px;
   }
+
+  .modal-expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
   .team-modal-footer {
     flex-direction: column-reverse;
   }
+
   .team-modal-footer button {
     width: 100%;
-  }
-  .team-trust-banner {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
