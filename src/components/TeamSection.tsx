@@ -98,10 +98,10 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onConsultClick }) => {
                 {/* Name */}
                 <h3 className="expert-name">{member.name}</h3>
 
-                {/* Qualification in Red Accent */}
+                {/* Qualification in Green Accent */}
                 <span className="expert-degree">{member.qualifications}</span>
 
-                {/* Role Capsule Badge in Red */}
+                {/* Role Capsule Badge in Corporate Navy */}
                 <div className="expert-role-badge">
                   <span>{member.designation.toUpperCase()}</span>
                 </div>

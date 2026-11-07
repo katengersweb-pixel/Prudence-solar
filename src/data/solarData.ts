@@ -426,7 +426,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     roleCategory: 'leadership',
     roleCategoryLabel: 'Executive Leadership',
     initials: 'SS',
-    avatarColor: 'linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%)',
+    avatarColor: 'linear-gradient(135deg, #102B50 0%, #1E3A8A 100%)',
     image: '/assets/team/saiempu-swapna.svg',
     shortBio:
       'Guiding corporate governance, financial strategy, and end-to-end PM Surya Ghar government subsidy coordination for swift, hassle-free approvals.',
@@ -451,7 +451,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     roleCategory: 'technical',
     roleCategoryLabel: 'Engineering & Installation Lead',
     initials: 'SN',
-    avatarColor: 'linear-gradient(135deg, #064E3B 0%, #047857 100%)',
+    avatarColor: 'linear-gradient(135deg, #1E5114 0%, #4D922D 100%)',
     image: '/assets/team/satyanarayana.svg',
     shortBio:
       'Leading electrical engineering, high-voltage grid synchronization, and structural design validation for zero-loss rooftop performance.',
