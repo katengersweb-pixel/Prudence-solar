@@ -113,7 +113,7 @@ body:has(.lightbox-backdrop) .gallery-loop-group {
   }
 }
 
-/* Portrait Image Cards matching Reference Aspect Ratio */
+/* Portrait Image Cards - Pure Authentic Photo View */
 .gallery-image-card {
   flex: 0 0 330px;
   height: 430px;
@@ -147,59 +147,7 @@ body:has(.lightbox-backdrop) .gallery-loop-group {
   transform: scale(1.06);
 }
 
-/* Bottom Information Bar matching Reference Geotag / Details */
-.gallery-card-bottom-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 32px 14px 12px 14px;
-  background: linear-gradient(to top, rgba(10, 28, 52, 0.88) 0%, rgba(10, 28, 52, 0.5) 60%, transparent 100%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.gallery-card-loc {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 4px 10px;
-  border-radius: 9999px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.gallery-card-loc .loc-pin {
-  color: #4ADE80;
-  flex-shrink: 0;
-}
-
-.gallery-card-cap {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #FEF08A;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 4px 9px;
-  border-radius: 9999px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(254, 240, 138, 0.25);
-  flex-shrink: 0;
-}
-
-/* Hover Overlay */
+/* Hover Overlay with View Icon */
 .gallery-image-overlay {
   position: absolute;
   inset: 0;
@@ -236,7 +184,7 @@ body:has(.lightbox-backdrop) .gallery-loop-group {
   transform: scale(1);
 }
 
-/* Responsive adjustments matching Image 2 */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .gallery-image-card {
     flex: 0 0 300px;

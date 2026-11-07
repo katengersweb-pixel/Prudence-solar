@@ -181,7 +181,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-1',
     title: '3 kW Residential Rooftop Solar Plant',
-    location: 'Hyderabad, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '3 kW On-Grid',
     category: 'Residential',
     image: '/assets/gallery/installation-3.jpg',
@@ -190,7 +190,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-2',
     title: 'Elevated Structure Foundation & Pedestals',
-    location: 'Secunderabad, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '5 kW Structural Base',
     category: 'Residential',
     image: '/assets/gallery/installation-2.jpg',
@@ -199,7 +199,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-3',
     title: '4 kW Home Solar Installation',
-    location: 'Chirala, Andhra Pradesh',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '4 kW On-Grid',
     category: 'Residential',
     image: '/assets/gallery/installation-8.jpg',
@@ -208,7 +208,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-4',
     title: 'Polycab On-Grid Inverter & Protection Units',
-    location: 'Warangal, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: 'Inverter & ACDB/DCDB',
     category: 'Commercial & Residential',
     image: '/assets/gallery/installation-10.jpg',
@@ -217,7 +217,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-5',
     title: 'Solar Power Backup & Hybrid Inverter Room',
-    location: 'Khammam, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: 'Hybrid Inverter Setup',
     category: 'Residential',
     image: '/assets/gallery/installation-13.jpg',
@@ -226,7 +226,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-6',
     title: 'Heavy-Duty Rooftop Solar Array',
-    location: 'Guntur, Andhra Pradesh',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '5 kW Elevated Structure',
     category: 'Residential',
     image: '/assets/gallery/installation-7.jpg',
@@ -235,7 +235,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-7',
     title: 'Commissioned Solar Inverter & Grid Sync',
-    location: 'Hyderabad, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '3 kW Grid-Tied System',
     category: 'Residential',
     image: '/assets/gallery/installation-9.jpg',
@@ -244,7 +244,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-8',
     title: 'Commercial Rooftop Solar at Retail Complex',
-    location: 'Vijayawada, Andhra Pradesh',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '10 kW Commercial',
     category: 'Commercial',
     image: '/assets/gallery/installation-5.jpg',
@@ -253,7 +253,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-9',
     title: 'Residential Rooftop Solar System',
-    location: 'Secunderabad, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '3.3 kW On-Grid',
     category: 'Residential',
     image: '/assets/gallery/installation-1.jpg',
@@ -262,7 +262,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-10',
     title: 'Precision Structural Underside & Framing',
-    location: 'Hyderabad, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: 'Engineering Detail',
     category: 'Technical Engineering',
     image: '/assets/gallery/installation-15.jpg',
@@ -271,7 +271,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-11',
     title: '100% Copper Earthing & Inverter Wiring',
-    location: 'Nalgonda, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: 'Electrical Commissioning',
     category: 'Technical Engineering',
     image: '/assets/gallery/installation-4.jpg',
@@ -280,7 +280,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-12',
     title: 'Sunset View of Completed Rooftop Solar Plant',
-    location: 'Bapatla District, Andhra Pradesh',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '5 kW On-Grid',
     category: 'Residential',
     image: '/assets/gallery/installation-12.jpg',
@@ -289,7 +289,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-13',
     title: 'Evening Commissioning & Inspection',
-    location: 'Khammam, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '4 kW Night View',
     category: 'Residential',
     image: '/assets/gallery/installation-14.jpg',
@@ -298,7 +298,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-14',
     title: 'High-Efficiency Terrace Solar Installation',
-    location: 'Hyderabad, Telangana',
+    location: 'Telangana & Andhra Pradesh',
     capacity: '3 kW On-Grid',
     category: 'Residential',
     image: '/assets/gallery/installation-11.jpg',

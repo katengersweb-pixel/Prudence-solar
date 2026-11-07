@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Eye, MapPin, Zap } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 import { GALLERY_ITEMS } from '../data/solarData';
 import type { GalleryItem } from '../types';
 import './GallerySection.css';
@@ -58,7 +58,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onImageClick }) 
                   key={`primary-${item.id}-${idx}`}
                   className="gallery-image-card"
                   onClick={() => onImageClick && onImageClick(item)}
-                  title={`${item.title} - Click to expand`}
+                  title={`${item.title} - Click to view full image`}
                 >
                   <img
                     src={item.image}
@@ -66,17 +66,6 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onImageClick }) 
                     className="gallery-image-photo"
                     loading="lazy"
                   />
-                  {/* Bottom Geotag & Location Bar matching Reference Design */}
-                  <div className="gallery-card-bottom-info">
-                    <span className="gallery-card-loc">
-                      <MapPin size={12} className="loc-pin" /> {item.location}
-                    </span>
-                    {item.capacity && (
-                      <span className="gallery-card-cap">
-                        <Zap size={11} /> {item.capacity}
-                      </span>
-                    )}
-                  </div>
                   <div className="gallery-image-overlay">
                     <div className="gallery-view-icon">
                       <Eye size={22} />
@@ -93,7 +82,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onImageClick }) 
                   key={`duplicate-${item.id}-${idx}`}
                   className="gallery-image-card"
                   onClick={() => onImageClick && onImageClick(item)}
-                  title={`${item.title} - Click to expand`}
+                  title={`${item.title} - Click to view full image`}
                 >
                   <img
                     src={item.image}
@@ -101,17 +90,6 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onImageClick }) 
                     className="gallery-image-photo"
                     loading="lazy"
                   />
-                  {/* Bottom Geotag & Location Bar matching Reference Design */}
-                  <div className="gallery-card-bottom-info">
-                    <span className="gallery-card-loc">
-                      <MapPin size={12} className="loc-pin" /> {item.location}
-                    </span>
-                    {item.capacity && (
-                      <span className="gallery-card-cap">
-                        <Zap size={11} /> {item.capacity}
-                      </span>
-                    )}
-                  </div>
                   <div className="gallery-image-overlay">
                     <div className="gallery-view-icon">
                       <Eye size={22} />
