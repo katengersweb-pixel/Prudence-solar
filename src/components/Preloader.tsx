@@ -75,8 +75,8 @@ export const Preloader: React.FC = () => {
             src="/assets/logo/prudence-logo.png"
             alt="Prudence Solar & Scientific Solutions Logo"
             className="preloader-logo-img"
-            width="260"
-            height="90"
+            width="210"
+            height="210"
           />
         </div>
 

@@ -65,13 +65,30 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
-        {/* Brand Logo */}
-        <a href="#hero" className="brand-logo-link" onClick={(e) => { e.preventDefault(); scrollTo('hero'); }}>
-          <img
-            src="/assets/logo/prudence-logo.png"
-            alt="Prudence Solar & Scientific Solutions Logo"
-            className="brand-logo-img"
-          />
+        {/* Brand Logo Lockup */}
+        <a
+          href="#hero"
+          className="brand-logo-link"
+          onClick={(e) => { e.preventDefault(); scrollTo('hero'); }}
+          aria-label="Prudence Solar & Scientific Solutions - Home"
+        >
+          <div className="brand-header-lockup">
+            <img
+              src="/assets/logo/prudence-emblem.png"
+              alt="Prudence Solar Emblem"
+              className="brand-header-emblem"
+              width="44"
+              height="41"
+            />
+            <div className="brand-header-text">
+              <span className="brand-header-name">PRUDENCE</span>
+              <span className="brand-header-company">SOLAR &amp; SCIENTIFIC SOLUTIONS</span>
+              <span className="brand-header-tagline">
+                <span className="tagline-sci">Inspired by Science.</span>{' '}
+                <span className="tagline-sun">Powered by Sun.</span>
+              </span>
+            </div>
+          </div>
         </a>
 
         {/* Desktop Navigation */}

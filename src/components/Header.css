@@ -25,7 +25,7 @@
   gap: 16px;
 }
 
-/* Brand Logo */
+/* Brand Header Lockup */
 .brand-logo-link {
   display: flex;
   align-items: center;
@@ -36,6 +36,64 @@
 
 .brand-logo-link:hover {
   transform: scale(1.02);
+}
+
+.brand-header-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-header-emblem {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(16, 43, 80, 0.1));
+}
+
+.brand-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
+.brand-header-name {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.brand-header-company {
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: var(--green);
+  line-height: 1.15;
+  margin-top: 2px;
+}
+
+.brand-header-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+
+.brand-header-tagline .tagline-sci {
+  color: #102B50;
+}
+
+.brand-header-tagline .tagline-sun {
+  color: #D97706;
+  font-weight: 800;
 }
 
 .brand-logo-img {
@@ -394,6 +452,12 @@
   .brand-logo-img {
     height: 42px;
   }
+  .brand-header-emblem {
+    height: 40px;
+  }
+  .brand-header-name {
+    font-size: 1.05rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -404,6 +468,23 @@
   .brand-logo-img {
     height: 38px;
     max-width: 160px;
+  }
+  .brand-header-lockup {
+    gap: 7px;
+  }
+  .brand-header-emblem {
+    height: 36px;
+  }
+  .brand-header-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  .brand-header-company {
+    font-size: 0.50rem;
+    letter-spacing: 0.04em;
+  }
+  .brand-header-tagline {
+    font-size: 0.54rem;
   }
   .header-quote-btn {
     padding: 8px 14px;
@@ -420,6 +501,23 @@
   .brand-logo-img {
     height: 34px;
     max-width: 135px;
+  }
+  .brand-header-lockup {
+    gap: 6px;
+  }
+  .brand-header-emblem {
+    height: 32px;
+  }
+  .brand-header-name {
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+  }
+  .brand-header-company {
+    font-size: 0.46rem;
+    letter-spacing: 0.03em;
+  }
+  .brand-header-tagline {
+    font-size: 0.50rem;
   }
   .header-quote-btn {
     padding: 7px 11px;
