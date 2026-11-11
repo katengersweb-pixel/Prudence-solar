@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Phone, Mail, MapPin } from 'lucide-react';
-import { CONTACT_INFO, PRODUCTS, getGmailComposeUrl } from '../data/solarData';
+import { CONTACT_INFO, PRODUCTS, OFFICES } from '../data/solarData';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -142,10 +142,8 @@ export const Footer: React.FC = () => {
                   {CONTACT_INFO.emails.map((email) => (
                     <a
                       key={email}
-                      href={getGmailComposeUrl(email)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={`Compose email to ${email} directly in Gmail`}
+                      href={`mailto:${email}`}
+                      title={`Send email to ${email}`}
                     >
                       {email}
                     </a>
@@ -155,12 +153,24 @@ export const Footer: React.FC = () => {
               <li className="footer-contact-item">
                 <MapPin size={15} className="footer-contact-icon" />
                 <div className="footer-contact-offices">
-                  <span className="footer-office-line">
+                  <a
+                    href={OFFICES[0]?.directionsUrl || '#office-hyderabad'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-office-link"
+                    title="Get directions to Office 1 on Google Maps"
+                  >
                     <strong>Office 1:</strong> Shameerpet, Hyderabad, Telangana – 500078
-                  </span>
-                  <span className="footer-office-line">
+                  </a>
+                  <a
+                    href={OFFICES[1]?.directionsUrl || '#office-andhra-pradesh'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-office-link"
+                    title="Get directions to Office 2 on Google Maps"
+                  >
                     <strong>Office 2:</strong> Audipudi, Karamchedu, Near Chirala, Bapatla, AP – 523170
-                  </span>
+                  </a>
                 </div>
               </li>
             </ul>

@@ -178,10 +178,52 @@
 }
 
 @media (max-width: 600px) {
+  .quote-modal-backdrop {
+    padding: 12px;
+  }
+  .quote-modal-card {
+    max-height: 92vh;
+    border-radius: 18px;
+  }
   .quote-form-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   .quote-form-content {
-    padding: 28px 20px 24px;
+    padding: 24px 18px 20px;
+  }
+  .quote-header-title {
+    font-size: 1.45rem;
+  }
+  .quote-header-sub {
+    font-size: 0.85rem;
+  }
+  .quote-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+  .modal-input, .modal-select {
+    padding: 11px 13px;
+  }
+  .quote-submit-btn {
+    min-height: 48px;
+    font-size: 0.92rem;
+  }
+  .quote-success-content {
+    padding: 36px 20px;
+  }
+  .quote-success-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .quote-form-content {
+    padding: 22px 14px 18px;
+  }
+  .quote-header-title {
+    font-size: 1.3rem;
   }
 }

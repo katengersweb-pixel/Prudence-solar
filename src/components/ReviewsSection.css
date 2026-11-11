@@ -160,6 +160,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .reviews-main-title {
+    font-size: 1.95rem;
+  }
   .review-quote-card {
     padding: 32px 24px 28px;
   }
@@ -172,5 +175,68 @@
     justify-content: center;
     gap: 16px;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-main-title {
+    font-size: 1.65rem;
+  }
+  .review-quote-card {
+    padding: 24px 16px 20px;
+    border-radius: 18px;
+  }
+  .quote-icon-bubble {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+  }
+  .quote-svg-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .review-stars-row {
+    margin-bottom: 14px;
+  }
+  .review-quote-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .review-author-meta {
+    margin-bottom: 20px;
+  }
+  .review-author-name {
+    font-size: 0.96rem;
+  }
+  .review-author-role {
+    font-size: 0.8rem;
+  }
+  .review-system-badge {
+    font-size: 0.72rem;
+  }
+  .review-arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .review-dots {
+    max-width: 100%;
+    gap: 6px;
+  }
+  .review-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .review-dot.active {
+    width: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .reviews-main-title {
+    font-size: 1.48rem;
+  }
+  .review-quote-text {
+    font-size: 0.9rem;
   }
 }

@@ -194,3 +194,70 @@
     height: 220px;
   }
 }
+
+@media (max-width: 520px) {
+  .surya-ghar-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .surya-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .surya-description {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .surya-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .surya-portal-btn,
+  .surya-enquire-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 18px;
+    font-size: 0.9rem;
+  }
+
+  .surya-image {
+    height: 195px;
+  }
+
+  .surya-benefits-col {
+    padding-top: 18px;
+    gap: 14px;
+  }
+
+  .benefit-icon-wrapper {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .benefit-heading {
+    font-size: 0.9rem;
+  }
+
+  .benefit-sub {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .surya-title {
+    font-size: 1.4rem;
+  }
+
+  .surya-image {
+    height: 175px;
+  }
+}

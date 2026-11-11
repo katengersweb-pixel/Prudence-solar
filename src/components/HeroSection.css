@@ -290,13 +290,18 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  .hero-section {
+    padding-top: 44px;
+    padding-bottom: 50px;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .hero-title {
-    font-size: 2.75rem;
+    font-size: 2.6rem;
   }
 
   .hero-image-card {
@@ -304,7 +309,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .hero-section {
     padding-top: 36px;
     padding-bottom: 44px;
@@ -314,18 +319,151 @@
     font-size: 2.2rem;
   }
 
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
   .hero-image-card {
-    height: 280px;
+    height: 320px;
+    border-radius: 18px;
   }
 
   .hero-quick-trust {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     width: 100%;
+    padding: 14px 16px;
+    box-sizing: border-box;
+  }
+
+  .trust-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .trust-text {
+    align-items: center;
+    font-size: 0.74rem;
   }
 
   .trust-divider {
     display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 28px;
+    padding-bottom: 36px;
+  }
+
+  .hero-tag-pill {
+    margin-bottom: 14px;
+    padding: 5px 12px;
+  }
+
+  .hero-tag-text {
+    font-size: 0.72rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .hero-image-card {
+    height: 250px;
+    border-radius: 16px;
+  }
+
+  .hero-card-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-card-arrow.arrow-prev {
+    left: 8px;
+  }
+
+  .hero-card-arrow.arrow-next {
+    right: 8px;
+  }
+
+  .hero-card-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-card-dots {
+    bottom: 10px;
+    padding: 4px 10px;
+    gap: 6px;
+  }
+
+  .card-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .card-dot.active {
+    width: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-image-card {
+    height: 220px;
+  }
+
+  .hero-quick-trust {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .trust-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .trust-text {
+    align-items: flex-start;
+    font-size: 0.78rem;
   }
 }

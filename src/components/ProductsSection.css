@@ -410,6 +410,28 @@
     font-size: 1.85rem;
   }
 
+  /* Horizontal swipeable category chips */
+  .product-category-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    gap: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .product-category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cat-pill {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    padding: 7px 14px;
+  }
+
   .products-carousel-track {
     gap: 16px;
   }
@@ -421,11 +443,54 @@
   }
 
   .product-image-container {
-    height: 180px;
+    height: 190px;
   }
 
   /* Hide floating side buttons on mobile to allow full-width swipe gestures */
   .carousel-side-btn {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-main-title {
+    font-size: 1.65rem;
+  }
+
+  .product-card-body {
+    padding: 18px 16px;
+  }
+
+  .product-title {
+    font-size: 1.08rem;
+  }
+
+  .product-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .product-specs-list {
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+
+  .spec-tag {
+    font-size: 0.75rem;
+  }
+
+  .carousel-dots-container {
+    margin-top: 20px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  .products-main-title {
+    font-size: 1.48rem;
+  }
+
+  .product-image-container {
+    height: 175px;
   }
 }

@@ -255,15 +255,35 @@
 
 @media (max-width: 640px) {
   .floating-actions-container {
-    bottom: 18px;
-    right: 18px;
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
   }
   .floating-btn {
     width: 46px;
     height: 46px;
   }
   .call-options-popup {
-    width: 290px;
-    bottom: 115px;
+    width: min(290px, calc(100vw - 32px));
+    right: 0;
+    bottom: 112px;
+  }
+}
+
+@media (max-width: 375px) {
+  .floating-actions-container {
+    bottom: 12px;
+    right: 12px;
+    gap: 8px;
+  }
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .call-options-popup {
+    width: calc(100vw - 24px);
+    right: 0;
+    bottom: 104px;
+    padding: 14px 12px;
   }
 }

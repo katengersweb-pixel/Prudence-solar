@@ -26,6 +26,27 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        setIsSolutionsDropdownOpen(false);
+      }
+    };
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const scrollTo = (id: string) => {
     setIsMobileMenuOpen(false);
     setIsSolutionsDropdownOpen(false);
@@ -261,7 +282,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             <button
               onClick={() => {
                 setIsMobileMenuOpen(false);
-                scrollTo('enquiry-form');
+                if (onOpenQuoteModal) {
+                  onOpenQuoteModal();
+                } else {
+                  scrollTo('enquiry-form');
+                }
               }}
               className="btn-primary mobile-quote-btn"
             >

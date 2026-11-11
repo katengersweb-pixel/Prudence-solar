@@ -600,10 +600,12 @@
 .table-responsive-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 .package-rates-table {
   width: 100%;
+  min-width: 580px;
   border-collapse: collapse;
   text-align: left;
 }
@@ -735,12 +737,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  .calc-main-title {
+    font-size: 1.95rem;
+  }
+  .calc-subtitle {
+    font-size: 0.98rem;
+  }
+}
+
 @media (max-width: 580px) {
   .results-metrics-grid {
     grid-template-columns: 1fr;
   }
   .calc-type-selector {
     flex-direction: column;
+    gap: 4px;
+  }
+  .type-tab {
+    padding: 11px 12px;
+    font-size: 0.82rem;
   }
   .package-chips-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -756,5 +772,129 @@
   }
   .toggle-btn-title {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calc-main-title {
+    font-size: 1.65rem;
+  }
+  .calc-subtitle {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+  .calculator-card {
+    padding: 16px 14px;
+    border-radius: 18px;
+  }
+  .calc-inputs-col {
+    gap: 4px;
+  }
+  .calc-promo-tag-row {
+    margin-bottom: 14px;
+  }
+  .promo-highlight-badge,
+  .promo-tech-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+  .calc-package-chips-wrap {
+    padding: 12px 10px;
+    margin-bottom: 18px;
+  }
+  .package-chips-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+  .package-chip-btn {
+    font-size: 0.72rem;
+    padding: 7px 2px;
+    border-radius: 6px;
+  }
+  .input-label-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .calc-bill-value {
+    font-size: 1.2rem;
+    padding: 4px 12px;
+  }
+  .preset-chips {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .preset-btn {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+  .calc-results-col {
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .subsidy-badge {
+    align-self: flex-start;
+  }
+  .results-metrics-grid {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .metric-box {
+    padding: 14px;
+  }
+  .metric-val {
+    font-size: 1.45rem;
+  }
+  .calc-apply-btn {
+    font-size: 0.88rem;
+    padding: 13px 14px;
+    min-height: 48px;
+  }
+  .calc-disclaimer {
+    font-size: 0.72rem;
+  }
+  .accordion-toggle-btn {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .toggle-btn-left {
+    width: 100%;
+  }
+  .toggle-btn-right {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 8px;
+  }
+  .banner-badges {
+    gap: 6px;
+  }
+  .banner-pill {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .calc-main-title {
+    font-size: 1.48rem;
+  }
+  .package-chip-btn {
+    font-size: 0.68rem;
+    padding: 6px 1px;
+  }
+  .preset-btn {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+  .metric-val {
+    font-size: 1.35rem;
   }
 }

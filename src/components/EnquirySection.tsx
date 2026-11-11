@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Clock, Building2, Navigation, ExternalLink } from 'lucide-react';
-import { CONTACT_INFO, OFFICES, getGmailComposeUrl } from '../data/solarData';
+import { CONTACT_INFO, OFFICES } from '../data/solarData';
 import type { EnquiryFormData } from '../types';
 import './EnquirySection.css';
 
@@ -180,11 +180,9 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({
                 {CONTACT_INFO.emails.map((email) => (
                   <a
                     key={email}
-                    href={getGmailComposeUrl(email)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`mailto:${email}`}
                     className="channel-link email-link"
-                    title={`Compose email to ${email} directly in Gmail`}
+                    title={`Send email to ${email}`}
                   >
                     {email}
                   </a>
