@@ -164,7 +164,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 <label className="modal-label">City / District *</label>
                 <input
                   type="text"
-                  placeholder="e.g. Varanasi, Prayagraj..."
+                  placeholder="e.g. Hyderabad, Chirala, Guntur..."
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
                   className="modal-input"

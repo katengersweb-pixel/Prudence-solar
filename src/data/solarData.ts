@@ -310,38 +310,119 @@ export const REVIEWS: ReviewItem[] = [
   {
     id: 'rev-1',
     quote: 'Great service and professional team. Our electricity bills have reduced significantly since the installation. The team handled all PM Surya Ghar paperwork and net metering without any hassle.',
-    author: 'Rajesh Sharma',
+    author: 'Tirupati',
     role: 'Homeowner',
-    location: 'Varanasi',
+    location: 'Alwal, Hyderabad',
+    rating: 5,
+    systemType: '3 kW On-Grid System'
+  },
+  {
+    id: 'rev-2',
+    quote: 'Prudence Solar fabricated a heavy-duty elevated structure on our terrace in Shameerpet. Excellent fabrication quality, 100% copper earthing, and quick DISCOM net meter synchronization.',
+    author: 'Ashok',
+    role: 'Homeowner',
+    location: 'Shameerpet, Hyderabad',
+    rating: 5,
+    systemType: '5 kW Elevated Rooftop Plant'
+  },
+  {
+    id: 'rev-3',
+    quote: 'Very satisfied with the installation. The team was transparent about costs, expected generation, and government subsidy. Power generation is consistent even on cloudy days.',
+    author: 'Ramesh',
+    role: 'Villa Owner',
+    location: 'Beeramguda, Hyderabad',
+    rating: 5,
+    systemType: '4 kW Rooftop Solar'
+  },
+  {
+    id: 'rev-4',
+    quote: 'Our monthly power bills dropped by almost 90%. The entire team was punctual, courteous, and handled the full portal registration and subsidy paperwork smoothly.',
+    author: 'Jagannathan Nair',
+    role: 'Homeowner',
+    location: 'Thunkunta, Hyderabad',
+    rating: 5,
+    systemType: '3 kW On-Grid System'
+  },
+  {
+    id: 'rev-5',
+    quote: 'Top quality Tier-1 bifacial panels and clean cable management. The elevated structure design allowed us to keep our terrace completely usable. Highly recommend Prudence Solar!',
+    author: 'Venkat',
+    role: 'Residential Customer',
+    location: 'Shameerpet, Hyderabad',
+    rating: 5,
+    systemType: '5 kW Solar Plant'
+  },
+  {
+    id: 'rev-6',
+    quote: 'Seamless experience from initial rooftop survey to final commissioning. Dr. Challa and the engineering staff provided expert guidance at every step of the installation.',
+    author: 'Ravikishore',
+    role: 'Homeowner',
+    location: 'Shameerpet, Hyderabad',
+    rating: 5,
+    systemType: '4 kW Elevated Structure'
+  },
+  {
+    id: 'rev-7',
+    quote: 'Installed a 10 kW system for our commercial building. The generation monitoring app works great and power generation exceeds our expectations. Outstanding engineering execution.',
+    author: 'Jakka Anil Kumar',
+    role: 'Commercial Property Owner',
+    location: 'Hyderabad',
+    rating: 5,
+    systemType: '10 kW Commercial Solar'
+  },
+  {
+    id: 'rev-8',
+    quote: 'Prudence Solar delivered outstanding quality in Chirala. Hot-dip galvanized structure, heavy-duty support legs, and prompt Central PM Surya Ghar subsidy approval without any delays.',
+    author: 'Subba Reddy',
+    role: 'Homeowner',
+    location: 'Chirala, Andhra Pradesh',
+    rating: 5,
+    systemType: '5 kW Rooftop Solar'
+  },
+  {
+    id: 'rev-9',
+    quote: 'Zero maintenance and hassle-free operation. We are getting maximum energy yield every sunny day and electricity savings are remarkable. Very happy with the team.',
+    author: 'Ramesh',
+    role: 'Residential Customer',
+    location: 'Chirala, Andhra Pradesh',
+    rating: 5,
+    systemType: '3 kW Rooftop Solar'
+  },
+  {
+    id: 'rev-10',
+    quote: 'Professional execution from start to finish. Structural stability was our top concern and their engineers provided custom C-Channel mounting that withstood heavy coastal winds effortlessly.',
+    author: 'Vijaya Ramireddy',
+    role: 'Homeowner',
+    location: 'Guntur, Andhra Pradesh',
     rating: 5,
     systemType: '5 kW On-Grid System'
   },
   {
-    id: 'rev-2',
-    quote: 'Prudence Solar provided high quality Tier-1 panels and clean cable management on our factory roof. Their after-sales support and generation monitoring app are truly remarkable.',
-    author: 'Sunil Verma',
-    role: 'Managing Director, Verma Mills',
-    location: 'Prayagraj',
+    id: 'rev-11',
+    quote: 'Direct subsidy credit received in our bank account swiftly. The 100% pure copper earthing and surge protection give us complete peace of mind. Excellent work by Prudence Solar.',
+    author: 'Ravishankar Reddy',
+    role: 'Homeowner',
+    location: 'Nellore, Andhra Pradesh',
     rating: 5,
-    systemType: '30 kW Commercial Plant'
+    systemType: '4 kW Rooftop Solar'
   },
   {
-    id: 'rev-3',
-    quote: 'Installed a 5HP solar pump system on our farm. It pumps water effortlessly from 7 AM to 5 PM every sunny day. Diesel expenses have completely gone to zero. Highly recommended!',
-    author: 'Rameshwar Yadav',
-    role: 'Agricultural Farmer',
-    location: 'Mirzapur',
+    id: 'rev-12',
+    quote: 'Impressive structural design and top-notch materials. Energy production has been consistent and electricity bills have plummeted. Their after-sales support is always just a call away.',
+    author: 'Vijay Ramesh Reddy',
+    role: 'Agricultural & Commercial Owner',
+    location: 'Nandyala, Andhra Pradesh',
     rating: 5,
-    systemType: '5 HP Solar Water Pump'
+    systemType: '6 kW Solar System'
   },
   {
-    id: 'rev-4',
-    quote: 'The team was transparent about the costs, expected generation, and government subsidy. Everything was completed on schedule with strict adherence to safety standards.',
-    author: 'Dr. Priya Tripathi',
-    role: 'Clinic Director',
-    location: 'Varanasi',
+    id: 'rev-13',
+    quote: 'Affordable, reliable, and completely transparent pricing. The entire rooftop installation was completed on schedule with zero damage to our terrace waterproofing.',
+    author: 'Ramakrishna',
+    role: 'Homeowner',
+    location: 'Nandigama, Andhra Pradesh',
     rating: 5,
-    systemType: '8 kW Solar Rooftop'
+    systemType: '3 kW On-Grid System'
   }
 ];
 
